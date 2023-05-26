@@ -1,15 +1,27 @@
 {
-  "name": "msch8495-tracker",
+  "name": "msch8495-music-tracker",
   "version": "1.0.0",
-  "description": "",
-  "main": "server.js",
+  "description": "its a tracker",
+  "repository": {
+    "type": "git",
+    "url": "(https://github.com/morgydesu/msch8495-tracker)"
+  },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "prestart": "parcel build ./public/index.html",
+    "dev": "parcel serve ./public/index.html",
     "start": "node server.js"
   },
-  "author": "",
+  "keywords": [
+    "tracker"
+  ],
+  "author": "Morgan Schmidt",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.18.2"
+    "express": "^4.18.2",
+    "sass": "^1.62.1"
+  },
+  "devDependencies": {
+    "@parcel/transformer-sass": "^2.8.3",
+    "parcel": "^2.8.3"
   }
 }

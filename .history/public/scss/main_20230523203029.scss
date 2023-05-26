@@ -1,0 +1,325 @@
+// @import {“typography.scss”;}
+// @import “color.scss”;
+// @import “layout.scss”;
+
+
+.tracker {
+    font-size: 14px;
+    border-collapse: collapse;
+    width: 600px;
+}
+
+.tracker,
+.tracker * {
+    font-family: sans-serif;
+}
+
+.tracker th {
+    font-size: 1.15em;
+    text-align: left;
+    font-weight: normal;
+    color: #ffffff;
+    background: #009578;
+}
+
+.tracker th,
+.tracker td {
+    padding: 0.75em;
+}
+
+.tracker__entries .tracker__row {
+    background: #eeeeee;
+}
+
+.tracker__entries .tracker__row:nth-child(odd) {
+    background: #dddddd;
+}
+
+.tracker__date,
+.tracker__workout,
+.tracker__duration {
+    display: inline-block;
+    box-sizing: border-box;
+    font-size: 1em;
+    height: 2.5em;
+    padding: 0.5em 0;
+    border: none;
+    outline: none;
+    background: none;
+}
+
+.tracker__duration {
+    width: 5em;
+    text-align: right;
+}
+
+.tracker__button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: none;
+    border: none;
+    border-radius: 50%;
+    outline: none;
+    color: red;
+    font-size: 1.5em;
+    margin-left: 0.5em;
+    cursor: pointer;
+}
+
+.tracker__button:hover {
+    background: rgba(0, 0, 0, 0.1);
+}
+
+.tracker__row--add {
+    border-top: 3px solid #333333;
+    border-bottom: 3px solid #333333;
+    background: #ffffff;
+}
+
+.tracker__row--add td {
+    text-align: right;
+}
+
+.tracker__add {
+    display: inline-block;
+    padding: 0.8em 1em;
+    color: green;
+    cursor: pointer;
+}
+
+.tracker__add:hover {
+    background:rgba(0, 0, 0, 0.1);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', 'sans-serif';
+}
+
+.container {
+    width: 100%;
+    height: 100vh;
+    // background: #3c5077;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn {
+    padding: 10px 60px;
+    background: #ffffff;
+    border: 0;
+    outline: none;
+    cursor: pointer;
+    font-size: 22px;
+    font-weight: 500;
+    border-radius: 30px;
+}
+
+.popup{
+    width: 400px;
+    background: #fff;
+    border-radius: 6px;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.1);
+    text-align: center;
+    padding: 0 30px 30px;
+    color: #333;
+    visibility: hidden;
+    transition: transform 0.4s, top 0.4s;
+}
+
+.open-popup{
+    visibility: visible;
+    top: 50%;
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.popup img{
+    width: 100px;
+    margin-top: -50px;
+    border-radius: 50%;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.popup h2 {
+    font-size: 38px;
+    font-weight: 500;
+    margin: 30px 0 10px;
+}
+
+.popup button {
+    width: 100%;
+    margin-top: 50px;
+    padding: 10px 0;
+    background: #6fd649;
+    color: #fff;
+    border: 0;
+    outline: none;
+    font-size: 18px;
+    border-radius: 4px;
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+// this is the audio playlist
+#box ol,#box ul {list-style:none}
+#box{
+    width:60%;
+    height:450px;
+    box-shadow:0 15px 50px rgba(0,0,0,.25);
+    top:50%;
+    left:50%;
+    margin-top:-178px;
+    margin-left:-417px
+}
+.bgCont { overflow:hidden}
+.bg{
+    box-shadow:0 10px 150px rgba(0,0,0,.3)inset;
+    -webkit-filter:blur(30px);
+    -moz-filter:blur(30px);
+    -o-filter:blur(30px);
+    -ms-filter:blur(30px);
+    filter:progid:DXImageTransform.Microsoft.Blur(PixelRadius='30');
+    filter:blur(30px);
+    background:url(../audio/img/s1.jpg);
+    background-repeat:no-repeat;
+    background-position:center;
+    background-size:cover
+}
+.genreArt{
+    width:50%;
+    height:100%;
+    margin:0 auto
+}
+.bg,.bgCont{
+    top:0;
+    left:0;
+    z-index:0
+}
+.bg,.bg-lyr,.bgCont{
+    width:100%;
+    height:100%
+}
+#box,.bg,.bg-lyr,.bgCont{
+    border-radius:10px
+}
+#box,#title,.bg,.bg-lyr,.bgCont,.header,.menu,.menu-bar{     position:absolute}
+.bg-lyr{
+    top:0;
+    left:0;
+    background:rgba(0,0,0,.42);
+    padding:20px 0;
+    z-index:1;
+    overflow:hidden
+}
+.album-large{
+    float:left;
+    padding:10px 0 0 20px;
+    height:400px;
+    width:400px;
+    overflow:hidden;
+    margin-left:20px
+}
+.album-large img{
+    margin-left:-400px;
+    height:300px
+}
+.album-large .art{
+    height:100%;
+    max-height:500px;
+    max-width:500px;
+    cursor:default
+}
+
+.songs{
+    overflow:auto;
+    max-height:100%;
+    -o-transition:all .2s ease;
+    transition:all .2s ease;
+    -webkit-transition:all .2s ease
+}
+.songs h1{
+    margin:10px 0 20px;
+    padding:0 20px;
+    font-family:Roboto,sans-serif;
+    font-weight:300;
+    font-size:20px;
+    text-transform:uppercase
+}
+.songs li{
+    line-height:50px;
+    text-shadow:0 2px 2px rgba(0,0,0,.1);
+    text-transfo3uw48ujrm:uppercase;
+    font-size:15px;
+    width:100%;
+    padding:0 20px;
+    float:left;
+    cursor:pointer
+}
+.songs li:hover{
+    background:rgba(0,0,0,.1)
+}
+.songs li img{
+    width:20px;
+    margin-top:-36px
+}
+.songs li span{
+    margin-right:20px;
+    font-size:12px;
+    font-weight:300;
+    height:50px;
+    float:left;
+    width:20px;
+    text-align:center
+}
+.songs li .playing{
+    display:none
+}
+.songs li .notplaying{
+    display:none
+}
+.songs li.nowplaying .playing{
+    display:block
+}
+.songs li:hover span i{
+    visibility:hidden
+}
+.songs li:hover .notplaying{
+    display:block
+}
+.nowplaying{
+    color:blue
+}
+.songs li.nowplaying span i{
+    visibility:hidden
+}
+li a{
+    color:#fff;
+    font-family:Roboto,sans-serif;
+    font-size:17px;
+    line-height:1;
+    text-decoration:none
+}
+li a:hover{
+    color:#fff;
+    text-decoration:none
+}
+.bottom.active{
+    opacity:1;
+    -webkit-transform:translate3d(0,0,0);
+    transform:translate3d(0,0,0)
+}
+.bottom .controls{
+    display:table;
+    height:100%;
+    width:100%;
+    table-layout:fixed;
+    font-size:14px;
+    color:rgba(255,255,255,.7)
+}

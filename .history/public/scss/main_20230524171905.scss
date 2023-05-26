@@ -1,0 +1,185 @@
+@import "typography";
+@import "color";
+@import "layout";
+
+.tracker {
+    font-size: 14px;
+    border-collapse: collapse;
+    width: 100%;
+    max-width: 600px;
+  }
+  
+  .tracker th,
+  .tracker td {
+    padding: 0.75em;
+  }
+  
+  .tracker__entries .tracker__row {
+    background: #eeeeee;
+  }
+  
+  .tracker__entries .tracker__row:nth-child(odd) {
+    background: #dddddd;
+  }
+  
+  .tracker__date,
+  .tracker__BPM,
+  .tracker__song,
+  .tracker__ID {
+    display: inline-block;
+    box-sizing: border-box;
+    font-size: 1em;
+    height: 2.5em;
+    padding: 0.5em 0;
+    border: none;
+    outline: none;
+    background: none;
+    width: 100%;
+  }
+  
+  .tracker__duration {
+    width: 5em;
+    text-align: right;
+  }
+  
+  .tracker__button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: none;
+    border: none;
+    border-radius: 50%;
+    outline: none;
+    color: red;
+    font-size: 1.5em;
+    margin-left: 0.5em;
+    cursor: pointer;
+  }
+  
+  .tracker__button:hover {
+    background: rgba(0, 0, 0, 0.1);
+  }
+  
+  .tracker__row--add {
+    border-top: 3px solid #333333;
+    border-bottom: 3px solid #333333;
+    background: #ffffff;
+  }
+  
+  .tracker__row--add td {
+    text-align: right;
+  }
+  
+  .tracker__add {
+    display: inline-block;
+    padding: 0.8em 1em;
+    color: #eb5160;
+    cursor: pointer;
+  }
+  
+  .tracker__add:hover {
+    background: rgba(0, 0, 0, 0.1);
+  }
+  
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', 'sans-serif';
+  }
+  
+  .container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #3c5077;
+  }
+  
+  .btn {
+    padding: 10px 60px;
+    background: #ffffff;
+    border: 0;
+    outline: none;
+    cursor: pointer;
+    font-size: 22px;
+    font-weight: 500;
+    border-radius: 30px;
+  }
+  
+  /* Responsive Styles */
+  
+  @media (max-width: 640px) {
+    .tracker {
+      font-size: 12px;
+    }
+  
+    .tracker th,
+    .tracker td {
+      padding: 0.5em;
+    }
+  
+    .tracker__date,
+    .tracker__BPM,
+    .tracker__song,
+    .tracker__ID {
+      font-size: 0.9em;
+    }
+  
+    .tracker__add {
+      font-size: 0.9em;
+    }
+  }
+  
+  @media (min-width: 641px) and (max-width: 1008px) {
+    .tracker {
+      font-size: 13px;
+    }
+  
+    .tracker th,
+    .tracker td {
+      padding: 0.6em;
+    }
+  
+    .tracker__date,
+    .tracker__BPM,
+    .tracker__song,
+    .tracker__ID {
+      font-size: 0.95em;
+    }
+  
+    .tracker__add {
+      font-size: 1em;
+    }
+  }
+  
+  @media (min-width: 1009px) {
+    .tracker {
+      max-width: 800px;
+    }
+  }
+
+
+//   side bar 
+// .sidebar {
+//     position: fixed;
+//     top: 0;
+//     left: -250px; /* Initially hidden */
+//     width: 250px;
+//     height: 100%;
+//     background-color: #f1f1f1;
+//     transition: left 0.3s ease;
+//     overflow: hidden;
+//   }
+  
+//   .sidebar-toggle {
+//     position: absolute;
+//     top: 10px;
+//     left: 10px;
+//     padding: 10px;
+//   }
+  
+//   .sidebar-content {
+//     padding: 20px;
+//   }

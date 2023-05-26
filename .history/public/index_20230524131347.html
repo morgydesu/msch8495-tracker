@@ -1,0 +1,68 @@
+  <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music tracker with HTML, CSS & JavaScript</title>
+    <link rel="stylesheet" href = "./scss/main.scss">
+    <script src="script.js" type = "module"></script>
+<!-- </head>  
+<body> -->
+  <!-- the playlist with add and delete -->
+  <!-- <div id="app"></div>
+</body>
+</html> -->
+
+
+<html>
+<head>
+<title>Music Tracking App</title>
+</head>
+<body>
+<h1>Music Tracking App</h1>
+
+<label for="song-input">Enter a song:</label>
+<input type="text" id="song-input">
+<button id="add-button">Add</button>
+<div id="app"></div>
+
+<ul id="song-list"></ul>
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  // Retrieve stored songs from local storage if available
+  const storedSongs = JSON.parse(localStorage.getItem('songs')) || [];
+
+  // Display stored songs on the page
+  const songList = document.getElementById('song-list');
+  storedSongs.forEach(song => {
+    const li = document.createElement('li');
+    li.textContent = song;
+    songList.appendChild(li);
+  });
+
+  // Add a new song
+  const addButton = document.getElementById('add-button');
+  addButton.addEventListener('click', () => {
+    const input = document.getElementById('song-input');
+    const song = input.value.trim();
+
+    if (song !== '') {
+      // Add song to the list
+      const li = document.createElement('li');
+      li.textContent = song;
+      songList.appendChild(li);
+
+      // Save the updated list to local storage
+      storedSongs.push(song);
+      localStorage.setItem('songs', JSON.stringify(storedSongs));
+
+      // Clear the input field
+      input.value = '';
+    }
+  });
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,52 @@
+  <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music tracker with HTML, CSS & JavaScript</title>
+    <link rel="stylesheet" href = "./scss/main.scss">
+    <script src="script.js" type = "module"></script>
+</head>  
+<body>
+
+  <!-- This is the side bar feature -->
+  <!-- <script>
+    const sidebar = document.createElement("div");
+sidebar.classList.add("sidebar");
+sidebar.innerHTML = `
+  <h2>Sidebar</h2>
+  <button class="closebtn" onclick="closeSidebar()">&times;</button>
+  <p>Add your code here</p>
+`;
+document.body.prepend(sidebar);
+
+const content = document.createElement("div");
+content.classList.add("content");
+content.innerHTML = `
+  <button class="openbtn" onclick="openSidebar()">&#9776; Open Sidebar</button>
+  <div id="app"></div>
+`;
+document.body.insertBefore(content, sidebar.nextSibling);
+
+function openSidebar() {
+  sidebar.style.width = "250px";
+  content.style.marginLeft = "250px";
+}
+
+function closeSidebar() {
+  sidebar.style.width = "0";
+  content.style.marginLeft = "0";
+}
+  </script> -->
+  
+
+  <!-- the playlist with add and delete -->
+  <div id="app"></div>
+
+  
+</body>
+</html>
+
+
+

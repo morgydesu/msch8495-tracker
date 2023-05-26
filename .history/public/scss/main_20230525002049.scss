@@ -1,0 +1,9 @@
+//imports all of the other sub scss to the main scss
+@import "discover";
+@import "musictracker";
+@import "lyrics";
+
+body{
+  background: #dfe0e2;
+}
+

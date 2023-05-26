@@ -1,0 +1,63 @@
+  <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music tracker with HTML, CSS & JavaScript</title>
+    <link rel="stylesheet" href = "./scss/main.scss">
+    <script src="script.js" type = "module"></script>
+</head>  
+<body>
+  <!-- the playlist with add and delete function -->
+  <div id="app"></div>
+
+  <div class="container">
+    <button type="submit" class="btn" onclick="openPopup()">Submit</button>
+    <div class="popup" id = "popup">
+      <img src="web.png">
+      <h2>Thank You!</h2>
+      <p>Your details has been successfully submitted. Thanks!</p>
+      <button type = "button" onclick="closePopup()">OK</button>
+    </div>
+  </div>
+
+  <!-- popup feature for the learn more page -->
+<script>
+  let popup= document.getElementById ("popup");
+  
+  function openPopup(){
+   popup.classList.add("open-popup");
+  }
+
+  function closePopup(){
+   popup.classList.remove("open-popup");
+  }
+</script>
+
+<!-- the audio gallery with playlist -->
+<div id="box">
+  <div class="bgCont">
+    <div class="bg">
+        <div class="genreArt" style="background: none;"></div>
+    </div>
+  </div>
+  <div class="bg-lyr">
+    <div class="album-large">
+        <img src="audio/img/s1.jpg" id="changed">
+    </div>
+    <div class="songs">
+      <h1 id="captions">Old Mcdonald Had A Farm</h1>
+      <ul id="playlist">
+      </ul>
+    </div>
+    <div class="bottom active">
+        <audio controls class="controls" id="playerJS">
+          Sorry, your browser does not support HTML5!
+        </audio>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,10 @@
+//imports all of the other sub scss to the main scss
+@import "discover";
+@import "musictracker";
+@import "lyrics";
+
+//this is the scss for the main, whole app
+body{
+  background: #dfe0e2;
+}
+

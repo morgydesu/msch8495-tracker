@@ -1,0 +1,103 @@
+  <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music tracker with HTML, CSS & JavaScript</title>
+    <link rel="stylesheet" href = "./scss/main.scss">
+    <script src="script.js" type = "module"></script>
+<!-- </head>  
+<body> -->
+  <!-- the playlist with add and delete -->
+  <!-- <div id="app"></div>
+</body>
+</html> -->
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>Music Tracking App</title>
+</head>
+<body>
+<h1>Music Tracking App</h1>
+
+<label for="song-input">Enter a song:</label>
+<input type="text" id="song-input">
+<button id="add-button">Add</button>
+
+<ul id="song-list"></ul>
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  // Retrieve stored songs from local storage if available
+  let storedSongs = JSON.parse(localStorage.getItem('songs')) || [];
+
+  // Display stored songs on the page
+  const songList = document.getElementById('song-list');
+  storedSongs.forEach((song, index) => {
+    const li = createSongItem(song, index);
+    songList.appendChild(li);
+  });
+
+  // Add a new song
+  const addButton = document.getElementById('add-button');
+  addButton.addEventListener('click', () => {
+    const input = document.getElementById('song-input');
+    const song = input.value.trim();
+
+    if (song !== '') {
+      // Add song to the list
+      const li = createSongItem(song, storedSongs.length);
+      songList.appendChild(li);
+
+      // Save the updated list to local storage
+      storedSongs.push(song);
+      localStorage.setItem('songs', JSON.stringify(storedSongs));
+
+      // Clear the input field
+      input.value = '';
+    }
+  });
+
+  // Delete a song
+  songList.addEventListener('click', (event) => {
+    if (event.target.classList.contains('delete-button')) {
+      const li = event.target.closest('li');
+      const index = parseInt(li.dataset.index, 10);
+      li.remove();
+
+      // Remove the song from the stored list
+      storedSongs.splice(index, 1);
+
+      // Update the indexes of remaining songs
+      songList.querySelectorAll('li').forEach((li, newIndex) => {
+        li.dataset.index = newIndex;
+      });
+
+      // Save the updated list to local storage
+      localStorage.setItem('songs', JSON.stringify(storedSongs));
+    }
+  });
+
+  // Create a new song item with delete button
+  function createSongItem(song, index) {
+    const li = document.createElement('li');
+    li.dataset.index = index;
+
+    const songText = document.createElement('span');
+    songText.textContent = song;
+    li.appendChild(songText);
+
+    const deleteButton = document.createElement('button');
+    deleteButton.textContent = 'Delete';
+    deleteButton.className = 'delete-button';
+    li.appendChild(deleteButton);
+
+    return li;
+  }
+});
+</script>
+</body>
+</html>

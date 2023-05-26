@@ -1,0 +1,88 @@
+//imports all of the other sub scss to the main scss
+@import "discover";
+@import "musictracker";
+@import "lyrics";
+@import "sidebar";
+
+
+//this is the scss for the whole app
+body{
+  background: #dfe0e2;
+}
+
+  /* Responsive Styles */
+  
+  @media (max-width: 640px) {
+    .tracker {
+      font-size: 12px;
+    }
+  
+    .tracker th,
+    .tracker td {
+      padding: 0.5em;
+    }
+  
+    .tracker__date,
+    .tracker__BPM,
+    .tracker__song,
+    .tracker__ID {
+      font-size: 0.9em;
+    }
+  
+    .tracker__add {
+      font-size: 0.9em;
+      width: 100%;
+    }
+  }
+  
+  @media (min-width: 641px) and (max-width: 1008px) {
+    .tracker {
+      font-size: 13px;
+    }
+  
+    .tracker th,
+    .tracker td {
+      padding: 0.6em;
+    }
+  
+    .tracker__date,
+    .tracker__BPM,
+    .tracker__song,
+    .tracker__ID {
+      font-size: 0.95em;
+    }
+  
+    .tracker__add {
+      font-size: 1em;
+    }
+  }
+  
+  @media (min-width: 1009px) {
+    //webview for the music tracker
+    .tracker {
+      font-size: 14px;
+    }
+  
+    .tracker th,
+    .tracker td {
+      padding: 0.7em;
+    }
+  
+    .tracker__date,
+    .tracker__BPM,
+    .tracker__song,
+    .tracker__ID {
+      font-size: 1em;
+    }
+  
+    .tracker__add {
+      font-size: 1.1em;
+    }
+
+    //webiew for the discover page
+    .genre__bpm {
+      justify-content: center;
+    }
+  
+  }
+
