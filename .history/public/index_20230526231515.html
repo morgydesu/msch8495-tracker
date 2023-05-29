@@ -1,0 +1,97 @@
+  <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music tracker with HTML, CSS & JavaScript</title>
+    <script src="main.js" type = "module"></script>
+    <link rel="stylesheet" href = "./scss/main.scss">
+    <link rel="stylesheet" href = "./scss/lyrics.scss">
+    <link rel="stylesheet" href = "./scss/musictracker.scss">
+    <link rel="stylesheet" href = "./scss/sidebar.scss">
+    <link rel="stylesheet" href = "./scss/discover.scss">
+    <link rel="stylesheet" href = "./scss/searchbar.scss">
+</head>  
+<body>  
+
+  
+    <!-- This is the side bar feature -->
+    <div class="container">
+      <div class="sidebar" id="sidebar">
+        <div class="sidebar__toggle" onclick="toggleSidebar()" id="sidebar-toggle">&#9776;</div>
+        <div class="sidebar__content">
+          <!-- Content inside the sidebar -->
+          <div id="app"></div>
+        </div>
+      </div>
+    </div>
+    
+  
+ <!-- This is the Discovery page  -->
+<h1>Discover</h1>
+
+<div class="genre__bpm">
+  <h2 class="genre__title">60~90 BPM</h2>
+  <h3 class="genre__title">Slow</h3>
+  <div class="album">
+    <div class="album__image"></div>
+    <div class="album__title">Album 1</div>
+    <div class="album__artist">Artist 1</div>
+  </div>
+  <div class="album">
+    <div class="album__image"></div>
+    <div class="album__title">Album 2</div>
+    <div class="album__artist">Artist 2</div>
+  </div>
+  <div class="album">
+    <div class="album__image"></div>
+    <div class="album__title">Album 3</div>
+    <div class="album__artist">Artist 3</div>
+  </div>
+</div>
+
+<div class="genre__bpm">
+  <h2 class="genre__title">100~150 BPM</h2>
+  <h3 class="genre__title">Medium</h3>
+  <div class="album">
+    <div class="album__image"></div>
+    <div class="album__title">Album 4</div>
+    <div class="album__artist">Artist 4</div>
+  </div>
+  <div class="album">
+    <div class="album__image"></div>
+    <div class="album__title">Album 5</div>
+    <div class="album__artist">Artist 5</div>
+  </div>
+  <div class="album">
+    <div class="album__image"></div>
+    <div class="album__title">Album 6</div>
+    <div class="album__artist">Artist 6</div>
+  </div>
+</div>
+
+<div class="genre__bpm">
+  <h2 class="genre__title">150~180+ BPM</h2>
+  <h3 class="genre__title">Fast</h3>
+  <div class="album">
+    <div class="album__image"></div>
+    <div class="album__title">Album 7</div>
+    <div class="album__artist">Artist 7</div>
+  </div>
+  <div class="album">
+    <div class="album__image"></div>
+    <div class="album__title">Album 8</div>
+    <div class="album__artist">Artist 8</div>
+  </div>
+  <div class="album">
+    <div class="album__image"></div>
+    <div class="album__title">Album 9</div>
+    <div class="album__artist">Artist 9</div>
+  </div>
+</div>
+</body>
+</html>
+
+
+

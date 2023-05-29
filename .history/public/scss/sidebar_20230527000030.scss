@@ -1,0 +1,43 @@
+.container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    justify-content: center;
+    background-color: #191414;
+    color: #fff;
+    font-family: Arial, sans-serif;
+    padding: px;
+  }
+
+  #sidebar-toggle {
+    font-size: 30px;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    color: #ffffff;
+    cursor: pointer;
+  }
+
+  #sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 250px;
+    height: 100%;
+    background: #333333;
+    color: #ffffff;
+    padding: 20px;
+    transition: left 0.3s ease;
+  }
+  
+  #app {
+    margin-left: 250px;
+    transition: margin-left 0.3s ease;
+  }
+  
+  #app-content {
+    display: none;
+  }
+  

@@ -1,0 +1,192 @@
+//music tracker playlist
+// .container {
+//       width: 50px;
+//       height: 50px;
+//       display: flex;
+//       background-color: #191414;
+//       color: #fff;
+//       font-family: Arial, sans-serif;
+//     }
+
+.tracker {
+  font-size: 14px;
+  border-collapse: collapse;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.tracker,
+.tracker * {
+  font-family: sans-serif;
+}
+
+.tracker th {
+  font-size: 1.15em;
+  text-align: center;
+  font-weight: normal;
+  color: #ffffff;
+  background: #eb5160;
+  padding: none;
+}
+
+.tracker th,
+.tracker td {
+  padding: 0.75em;
+}
+
+.tracker__entries .tracker__row {
+  background: #eeeeee;
+}
+
+.tracker__entries .tracker__row:nth-child(odd) {
+  background: #dddddd;
+  margin-bottom: 10px;
+}
+
+.tracker__date,
+.tracker__BPM,
+.tracker__song,
+.tracker__ID {
+  display: inline-block;
+  box-sizing: border-box;
+  font-size: 1em;
+  height: 2.5em;
+  padding: 0.5em 0;
+  border: none;
+  outline: none;
+  background: none;
+  width: 100%;
+}
+
+.tracker__bpm-container {
+  display: flex;
+  align-items: center;
+}
+
+.tracker__bpm-image {
+  order: -1;
+  margin-right: 5px;
+}
+
+.tracker__bpm-container:not(.empty) .tracker__bpm-image {
+  display: inline-block;
+}
+
+.tracker__button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: none;
+  border: none;
+  border-radius: 50%;
+  outline: none;
+  color: red;
+  font-size: 1.5em;
+  margin-left: 0.5em;
+  cursor: pointer;
+  width: 100%;
+}
+
+.tracker__button:hover {
+  background: rgba(0, 0, 0, 0.1);
+}
+
+.tracker__row--add {
+  border-top: 3px solid #333333;
+  border-bottom: 3px solid #333333;
+  background: #ffffff;
+  width: 50%;
+}
+
+.tracker__row--add td {
+  text-align: right;
+}
+
+.tracker__add {
+  color: #eb5160;
+  cursor: pointer;
+  padding: 0.5em 0.5em;
+  display: inline-block;
+  font-size: 22px;
+}
+
+.tracker__add:hover {
+  background: rgba(0, 0, 0, 0.1);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', 'sans-serif';
+}
+
+.btn {
+  padding: 10px 60px;
+  background: #ffffff;
+  border: 0;
+  outline: none;
+  cursor: pointer;
+  font-size: 22px;
+  font-weight: 500;
+  border-radius: 30px;
+}
+
+.musictracker__header {
+  width: 100%;
+  max-width: 400px; /* Adjust the width as needed */
+  margin-right: auto;
+  margin-left: 0;
+}
+
+.musictracker__footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #ffffff;
+  margin-left: 0;
+}
+
+.tracker__label {
+  font-size: 1.15em;
+  font-weight: normal;
+  color: #ffffff;
+  background: #eb5160;
+  padding: 0.75em;
+  text-align: center;
+}
+
+.tracker__column {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+}
+
+.search-bar {
+  display: flex;
+  align-items: center;
+  max-width: 600px;
+  margin: 20px auto;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 30px;
+  overflow: hidden;
+}
+
+.search-input {
+  flex: 1;
+  border: none;
+  padding: 10px;
+  font-size: 16px;
+}
+
+.search-button {
+  padding: 10px 20px;
+  background-color: #ff5a5f;
+  color: #fff;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}

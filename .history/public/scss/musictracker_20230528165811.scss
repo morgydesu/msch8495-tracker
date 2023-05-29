@@ -1,0 +1,162 @@
+
+/* Music Tracker Playlist */
+.tracker {
+  font-size: 14px;
+  border-collapse: collapse;
+  width: 100%;
+  max-width: 600px; /* Added to limit the width */
+  margin: 0 auto; /* Center horizontally */
+  border-radius: 10px; /* Added to add curved edges */
+}
+
+.tracker,
+.tracker * {
+  font-family: sans-serif;
+}
+
+.tracker th {
+  font-size: 1.15em;
+  text-align: left;
+  font-weight: normal;
+  color: #ffffff;
+  background: #eb5160;
+  padding: 10px; /* Adjusted padding */
+}
+
+.tracker th,
+.tracker td {
+  padding: 10px; /* Adjusted padding */
+}
+
+.tracker__entries .tracker__row {
+  background: #eeeeee;
+}
+
+.tracker__entries .tracker__row:nth-child(odd) {
+  background: #dddddd;
+}
+
+.tracker__date,
+.tracker__BPM,
+.tracker__song,
+.tracker__ID {
+  display: inline-block;
+  box-sizing: border-box;
+  font-size: 1em;
+  height: 2.5em;
+  padding: 5px; /* Adjusted padding */
+  border: none;
+  outline: none;
+  background: none;
+  width: 100%;
+}
+
+.tracker__bpm-container {
+  display: flex;
+  align-items: center;
+}
+
+.tracker__bpm-image {
+  order: -1;
+  margin-right: 5px;
+}
+
+.tracker__bpm-container:not(.empty) .tracker__bpm-image {
+  display: inline-block;
+}
+
+.tracker__button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: none;
+  border: none;
+  border-radius: 50%;
+  outline: none;
+  color: red;
+  font-size: 1.5em;
+  margin-left: 0.5em;
+  cursor: pointer;
+  width: 100%;
+}
+
+.tracker__button:hover {
+  background: rgba(0, 0, 0, 0.1);
+}
+
+.tracker__row--add {
+  border-top: 3px solid #333333;
+  border-bottom: 3px solid #333333;
+  background: #ffffff;
+}
+
+.tracker__row--add td {
+  text-align: right;
+}
+
+.tracker__add {
+  color: #eb5160;
+  cursor: pointer;
+  padding: 0.5em 1em; /* Adjusted padding */
+  display: inline-block;
+  font-size: 22px;
+}
+
+.tracker__add:hover {
+  background: rgba(0, 0, 0, 0.1);
+}
+
+.musictracker__header {
+  text-align: center; /* Center align the Music Tracker */
+  margin-top: 20px; /* Added margin to create space from the top */
+  border-radius: 10px; /* Added to add curved edges */
+}
+
+.tracker {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.tracker th,
+.tracker td {
+  padding: 10px;
+  text-align: center;
+}
+
+.tracker__add {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: none;
+  border: none;
+  border-radius: 50%;
+  outline: none;
+  color: red;
+  font-size: 1.5em;
+  cursor: pointer;
+  width: 30px;
+  height: 30px;
+}
+
+.tracker__add:hover {
+  background: rgba(0, 0, 0, 0.1);
+}
+
+.button {
+  padding: 8px 16px;
+  background-color: #f44336;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: #d32f2f;
+}
+
+.button:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(244, 67, 54, 0.3);
+}
+
