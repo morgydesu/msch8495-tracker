@@ -1,16 +1,14 @@
 //imports all of the other sub scss to the main scss
 @import "discover";
 @import "musictracker";
-@import "header";
+@import "lyrics";
+@import "sidebar";
+@import "searchbar";
 
 
 //this is the scss for the whole app
 body{
   background: #dfe0e2;
-}
-
-.logo{
-  background: #eb5160;
 }
 
   /* Responsive Styles */

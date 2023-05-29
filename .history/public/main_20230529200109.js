@@ -1,4 +1,4 @@
-// Music Tracker Function
+// // Music Tracker Function
 class MusicTracker {
   static LOCAL_STORAGE_DATA_KEY = "music-tracker-entries";
   counter = 1;
@@ -141,25 +141,75 @@ const wt = new MusicTracker(musicTracker);
 // Export the Music Tracker instance to the global scope for access in the console
 window.wt = wt;
 
-//discover onclick function
-function showAlbumDetails(element) {
-  const albumTitle = element.nextElementSibling.querySelector(".album__title").textContent;
-  const albumArtist = element.nextElementSibling.querySelector(".album__artist").textContent;
 
-  const popupContainer = document.getElementById("popupContainer");
-  const albumTitleElement = document.getElementById("albumTitle");
-  const albumArtistElement = document.getElementById("albumArtist");
+//discover page with popup function
+class DescriptionPopup {
+  constructor(root) {
+    this.root = root;
+    this.popupContainer = null; // Track the popup container element
+  }
 
-  albumTitleElement.textContent = albumTitle;
-  albumArtistElement.textContent = albumArtist;
+  showPopup(description) {
+    this.popupContainer = document.createElement("div");
+    this.popupContainer.classList.add("popup-container");
 
-  popupContainer.style.display = "block";
+    const popupContent = document.createElement("div");
+    popupContent.classList.add("popup-content");
+
+    const descriptionElement = document.createElement("p");
+    descriptionElement.textContent = description;
+    descriptionElement.classList.add("popup-description");
+
+    popupContent.appendChild(descriptionElement);
+    this.popupContainer.appendChild(popupContent);
+    this.root.appendChild(this.popupContainer);
+
+    this.popupContainer.addEventListener("click", () => {
+      this.closePopup();
+    });
+  }
+
+  closePopup() {
+    this.root.removeChild(this.popupContainer);
+  }
 }
 
-document.addEventListener("DOMContentLoaded", () => {
-  const popupContainer = document.getElementById("popupContainer");
+const pretenderLyrics = `Keep you in the dark
+You know they all pretend
+... (lyrics truncated for brevity) ...`;
 
-  popupContainer.addEventListener("click", () => {
-    popupContainer.style.display = "none";
+document.addEventListener("DOMContentLoaded", () => {
+  const albumElements = document.querySelectorAll(".album");
+
+  albumElements.forEach((albumElement) => {
+    albumElement.addEventListener("click", () => {
+      const albumTitle = albumElement.querySelector(".album__title").textContent;
+      const albumArtist = albumElement.querySelector(".album__artist").textContent;
+      let description = `Title: ${albumTitle}\nArtist: ${albumArtist}`;
+
+      if (albumTitle === "The Pretender") {
+        description += `\n\nLyrics:\n${pretenderLyrics}`;
+      }
+
+      const popup = new DescriptionPopup(albumElement);
+      popup.showPopup(description);
+    });
   });
+
+  // Get references to the popup container and close button
+  const popupContainer = document.getElementById("popup-container");
+  const popupCloseButton = document.getElementById("popup-close");
+
+  // Function to open the popup
+  function openPopup() {
+    popupContainer.style.display = "flex";
+  }
+
+  // Function to close the popup
+  function closePopup() {
+    popupContainer.style.display = "none";
+  }
+
+  // Add event listener to the close button
+  popupCloseButton.addEventListener("click", closePopup);
 });

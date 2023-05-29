@@ -1,0 +1,195 @@
+  <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music tracker with HTML, CSS & JavaScript</title>
+    <script src="main.js" type = "module"></script>
+    <link rel="stylesheet" href = "./scss/main.scss">
+    <link rel="stylesheet" href = "./scss/lyrics.scss">
+    <link rel="stylesheet" href = "./scss/musictracker.scss">
+    <!-- <link rel="stylesheet" href = "./scss/sidebar.scss"> -->
+    <link rel="stylesheet" href = "./scss/discover.scss">
+    <link rel="stylesheet" href = "./scss/searchbar.scss">
+</head>  
+<body>  
+
+<div class="music-tracker" id="music-tracker">
+  <!-- Music Tracker section -->
+</div>
+
+<div class="entry-list" id="entry-list">
+  <!-- Entry List section -->
+  <ul></ul>
+</div>
+
+ <!-- This is the Discovery page  -->
+<!-- <h1>Discover</h1>
+
+<div class="genre__bpm">
+  <h2 class="genre__title">60~90 BPM</h2>
+  <h3 class="genre__title">Slow Speed</h3>
+  <div class="album">
+    <div class="album__image"></div>
+    <div class="album__title">Buterfly</div>
+    <div class="album__artist">60 BPM</div>
+  </div>
+  <div class="album">
+    <div class="album__image"></div>
+    <div class="album__title">Pink Rose</div>
+    <div class="album__artist">90 BPM</div>
+  </div>
+  <div class="album">
+    <div class="album__image"></div>
+    <div class="album__title">Pink Gravity</div>
+    <div class="album__artist">70 BPM</div>
+  </div>
+  <div class="album">
+    <div class="album__image"></div>
+    <div class="album__title">Pink Lady</div>
+    <div class="album__artist">90 BPM</div>
+  </div>
+</div>
+
+<div class="genre__bpm">
+  <h2 class="genre__title">100~150 BPM</h2>
+  <h3 class="genre__title">Medium Speed</h3>
+  <div class="album">
+    <div class="album__image"></div>
+    <div class="album__title">Feels</div>
+    <div class="album__artist">135 BPM</div>
+  </div>
+  <div class="album">
+    <div class="album__image"></div>
+    <div class="album__title">Eye Candy</div>
+    <div class="album__artist">120 BPM</div>
+  </div>
+  <div class="album">
+    <div class="album__image"></div>
+    <div class="album__title">Summer B</div>
+    <div class="album__artist">100 BPM</div>
+  </div>
+  <div class="album">
+    <div class="album__image"></div>
+    <div class="album__title">Somebody</div>
+    <div class="album__artist">120 BPM</div>
+  </div>
+</div>
+
+<div class="genre__bpm">
+  <h2 class="genre__title">150~180+ BPM</h2>
+  <h3 class="genre__title">Fast Speed</h3>
+  <div class="album">
+    <div class="album__image"></div>
+    <div class="album__title">Disco Tech</div>
+    <div class="album__artist">170 BPM</div>
+  </div>
+  <div class="album">
+    <div class="album__image"></div>
+    <div class="album__title">Zeus</div>
+    <div class="album__artist">185 BPM</div>
+  </div>
+  <div class="album">
+    <div class="album__image"></div>
+    <div class="album__title">The Pretender</div>
+    <div class="album__artist">172 BPM</div>
+  </div>
+  <div class="album">
+    <div class="album__image"></div>
+    <div class="album__title">Random</div>
+    <div class="album__artist">170 BPM</div>
+  </div> -->
+<!-- </div> -->
+
+<div class="popup-container" id="popup-container">
+  <div class="popup-content">
+    <h2 class="popup-title">Popup Title</h2>
+    <p class="popup-description">Popup Description</p>
+    <button class="popup-close" id="popup-close">Close</button>
+  </div>
+</div>
+
+
+<h1>Discover</h1>
+
+<div class="genre__bpm">
+  <h2 class="genre__title">60~90 BPM</h2>
+  <h3 class="genre__title">Slow Speed</h3>
+  <div class="album">
+    <div class="album__image"></div>
+    <div class="album__title">Buterfly</div>
+    <div class="album__artist">60 BPM</div>
+  </div>
+  <div class="album">
+    <div class="album__image"></div>
+    <div class="album__title">Pink Rose</div>
+    <div class="album__artist">90 BPM</div>
+  </div>
+  <div class="album">
+    <div class="album__image"></div>
+    <div class="album__title">Pink Gravity</div>
+    <div class="album__artist">70 BPM</div>
+  </div>
+  <div class="album">
+    <div class="album__image"></div>
+    <div class="album__title">Pink Lady</div>
+    <div class="album__artist">90 BPM</div>
+  </div>
+</div>
+
+<div class="genre__bpm">
+  <h2 class="genre__title">100~150 BPM</h2>
+  <h3 class="genre__title">Medium Speed</h3>
+  <div class="album">
+    <div class="album__image"></div>
+    <div class="album__title">Feels</div>
+    <div class="album__artist">135 BPM</div>
+  </div>
+  <div class="album">
+    <div class="album__image"></div>
+    <div class="album__title">Eye Candy</div>
+    <div class="album__artist">120 BPM</div>
+  </div>
+  <div class="album">
+    <div class="album__image"></div>
+    <div class="album__title">Summer B</div>
+    <div class="album__artist">100 BPM</div>
+  </div>
+  <div class="album">
+    <div class="album__image"></div>
+    <div class="album__title">Somebody</div>
+    <div class="album__artist">120 BPM</div>
+  </div>
+</div>
+
+<div class="genre__bpm">
+  <h2 class="genre__title">150~180+ BPM</h2>
+  <h3 class="genre__title">Fast Speed</h3>
+  <div class="album">
+    <div class="album__image"></div>
+    <div class="album__title">Disco Tech</div>
+    <div class="album__artist">170 BPM</div>
+  </div>
+  <div class="album">
+    <div class="album__image"></div>
+    <div class="album__title">Zeus</div>
+    <div class="album__artist">185 BPM</div>
+  </div>
+  <div class="album">
+    <div class="album__image"></div>
+    <div class="album__title">The Pretender</div>
+    <div class="album__artist">172 BPM</div>
+  </div>
+  <div class="album">
+    <div class="album__image"></div>
+    <div class="album__title">Random</div>
+    <div class="album__artist">170 BPM</div>
+  </div>
+</div>
+
+</body>
+</html>
+
+
+

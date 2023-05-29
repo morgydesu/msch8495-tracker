@@ -1,4 +1,4 @@
-// Music Tracker Function
+// // Music Tracker Function
 class MusicTracker {
   static LOCAL_STORAGE_DATA_KEY = "music-tracker-entries";
   counter = 1;
@@ -141,25 +141,128 @@ const wt = new MusicTracker(musicTracker);
 // Export the Music Tracker instance to the global scope for access in the console
 window.wt = wt;
 
-//discover onclick function
-function showAlbumDetails(element) {
-  const albumTitle = element.nextElementSibling.querySelector(".album__title").textContent;
-  const albumArtist = element.nextElementSibling.querySelector(".album__artist").textContent;
 
-  const popupContainer = document.getElementById("popupContainer");
-  const albumTitleElement = document.getElementById("albumTitle");
-  const albumArtistElement = document.getElementById("albumArtist");
+//discover page with popup function
+class DescriptionPopup {
+  constructor(root) {
+    this.root = root;
+  }
 
-  albumTitleElement.textContent = albumTitle;
-  albumArtistElement.textContent = albumArtist;
+  showPopup(title, artist, lyrics) {
+    const popupContainer = document.createElement("div");
+    popupContainer.classList.add("popup-container");
 
-  popupContainer.style.display = "block";
+    const popupContent = document.createElement("div");
+    popupContent.classList.add("popup-content");
+
+    const titleElement = document.createElement("h3");
+    titleElement.textContent = title;
+    titleElement.classList.add("popup-title");
+
+    const artistElement = document.createElement("p");
+    artistElement.textContent = `Artist: ${artist}`;
+    artistElement.classList.add("popup-artist");
+
+    const lyricsElement = document.createElement("pre");
+    lyricsElement.textContent = lyrics;
+    lyricsElement.classList.add("popup-lyrics");
+
+    popupContent.appendChild(titleElement);
+    popupContent.appendChild(artistElement);
+    popupContent.appendChild(lyricsElement);
+    popupContainer.appendChild(popupContent);
+    this.root.appendChild(popupContainer);
+
+    popupContainer.addEventListener("click", () => {
+      this.closePopup(popupContainer);
+    });
+  }
+
+  closePopup(popupContainer) {
+    this.root.removeChild(popupContainer);
+  }
 }
 
-document.addEventListener("DOMContentLoaded", () => {
-  const popupContainer = document.getElementById("popupContainer");
+// Add event listeners to album elements
+const albums = document.querySelectorAll(".album");
+const descriptionPopup = new DescriptionPopup(document.body);
 
-  popupContainer.addEventListener("click", () => {
-    popupContainer.style.display = "none";
+albums.forEach((album) => {
+  album.addEventListener("click", () => {
+    const title = album.querySelector(".album__title").textContent;
+    const artist = album.querySelector(".album__artist").textContent;
+    let lyrics = "";
+
+    // Check the song title to set the lyrics
+    if (title === "The Pretender") {
+      lyrics = `Keep you in the dark
+      You know they all pretend
+      Keep you in the dark
+      And so it all began
+      Send in your skeletons
+      Sing as their bones go marching in, again
+      The need you buried deep
+      The secrets that you keep are at the ready
+      Are you ready?
+      I'm finished making sense
+      Done pleading ignorance, that whole defense
+      Spinning infinity, boy
+      The wheel is spinning me
+      It's never-ending, never-ending
+      Same old story
+      What if I say I'm not like the others?
+      What if I say I'm not just another one of your plays?
+      You're the pretender
+      What if I say I will never surrender?
+      What if I say I'm not like the others?
+      What if I say I'm not just another one of your plays?
+      You're the pretender
+      What if I say that I'll never surrender?
+      In time or so I'm told
+      I'm just another soul for sale, oh well
+      The page is out of print
+      We are not permanent
+      We're temporary, temporary
+      Same old story
+      What if I say I'm not like the others?
+      What if I say I'm not just another one of your plays?
+      You're the pretender
+      What if I say I will never surrender?
+      What if I say I'm not like the others?
+      What if I say I'm not just another one of your plays?
+      You're the pretender
+      What if I say I will never surrender?
+      What if I say I'm not like the others?
+      What if I say I'm not just another one of your plays?
+      You're the pretender
+      What if I say I will never surrender?
+      What if I say I'm not like the others?
+      What if I say I'm not just another one of your plays?
+      You're the pretender
+      What if I say I will never surrender?
+      So who are you?
+      Yeah, who are you?
+      Yeah, who are you?
+      Yeah, who are you?
+      Keep you in the dark
+      You know they all pretend
+      What if I say I'm not like the others?
+      What if I say I'm not just another one of your plays?
+      You're the pretender
+      What if I say I will never surrender?
+      What if I say I'm not like the others?
+      What if I say I'm not just another one of your plays?
+      You're the pretender
+      What if I say I will never surrender?
+      What if I say I'm not like the others?
+      What if I say I'm not just another one of your plays?
+      You're the pretender
+      What if I say I will never surrender?`;
+
+      // Remove excessive indentation from lyrics
+      lyrics = lyrics.trim().replace(/\n\s+/g, "\n");
+    }
+
+    descriptionPopup.showPopup(title, artist, lyrics);
   });
 });

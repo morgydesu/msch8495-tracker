@@ -1,4 +1,6 @@
-// Music Tracker Function
+
+
+// // Music Tracker Function
 class MusicTracker {
   static LOCAL_STORAGE_DATA_KEY = "music-tracker-entries";
   counter = 1;
@@ -62,13 +64,10 @@ class MusicTracker {
   
   static html() {
     return `
-    <div class="header">
-    <img src="trackerlogo.png" alt="Logo">
-  </div>
       <div class="music-tracker">
         <div class="tracker__inputs">
-          <input type="text" class="tracker__song" placeholder="Type song from discover">
-          <select class="tracker__BPM" placeholder="Select speed">
+          <input type="text" class="tracker__song" placeholder="Type song">
+          <select class="tracker__BPM">
             <option value="60~90 BPM" data-image="path_to_slow_image.png">60~90 BPM</option>
             <option value="100~150 BPM" data-image="path_to_medium_image.png">100~150 BPM</option>
             <option value="150~180+ BPM" data-image="path_to_fast_image.png">150~180+ BPM</option>
@@ -140,26 +139,3 @@ const wt = new MusicTracker(musicTracker);
 
 // Export the Music Tracker instance to the global scope for access in the console
 window.wt = wt;
-
-//discover onclick function
-function showAlbumDetails(element) {
-  const albumTitle = element.nextElementSibling.querySelector(".album__title").textContent;
-  const albumArtist = element.nextElementSibling.querySelector(".album__artist").textContent;
-
-  const popupContainer = document.getElementById("popupContainer");
-  const albumTitleElement = document.getElementById("albumTitle");
-  const albumArtistElement = document.getElementById("albumArtist");
-
-  albumTitleElement.textContent = albumTitle;
-  albumArtistElement.textContent = albumArtist;
-
-  popupContainer.style.display = "block";
-}
-
-document.addEventListener("DOMContentLoaded", () => {
-  const popupContainer = document.getElementById("popupContainer");
-
-  popupContainer.addEventListener("click", () => {
-    popupContainer.style.display = "none";
-  });
-});

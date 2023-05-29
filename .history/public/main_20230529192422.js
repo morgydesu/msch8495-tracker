@@ -1,4 +1,4 @@
-// Music Tracker Function
+// // Music Tracker Function
 class MusicTracker {
   static LOCAL_STORAGE_DATA_KEY = "music-tracker-entries";
   counter = 1;
@@ -141,25 +141,95 @@ const wt = new MusicTracker(musicTracker);
 // Export the Music Tracker instance to the global scope for access in the console
 window.wt = wt;
 
-//discover onclick function
-function showAlbumDetails(element) {
-  const albumTitle = element.nextElementSibling.querySelector(".album__title").textContent;
-  const albumArtist = element.nextElementSibling.querySelector(".album__artist").textContent;
 
-  const popupContainer = document.getElementById("popupContainer");
-  const albumTitleElement = document.getElementById("albumTitle");
-  const albumArtistElement = document.getElementById("albumArtist");
+//discover page 
+this.root.querySelector(".discover__albums").addEventListener("click", (event) => {
+  const target = event.target;
 
+  // Check if the clicked element is an album image, album title, or album artist
+  if (target.classList.contains("album__image") ||
+      target.classList.contains("album__title") ||
+      target.classList.contains("album__artist")) {
+    // Get the album information
+    const albumImage = target.parentElement.querySelector(".album__image").src;
+    const albumTitle = target.parentElement.querySelector(".album__title").textContent;
+    const albumArtist = target.parentElement.querySelector(".album__artist").textContent;
+
+    // Call the popup function and pass the album information
+    this.showPopup(albumImage, albumTitle, albumArtist);
+  }
+});
+
+showPopup(albumImage, albumTitle, albumArtist) {
+  // Create the popup container element
+  const popupContainer = document.createElement("div");
+  popupContainer.classList.add("popup-container");
+
+  // Create the popup content
+  const popupContent = document.createElement("div");
+  popupContent.classList.add("popup-content");
+
+  // Create the album image element
+  const albumImageElement = document.createElement("img");
+  albumImageElement.src = albumImage;
+  albumImageElement.alt = "Album Image";
+  albumImageElement.classList.add("popup-album-image");
+
+  // Create the album title element
+  const albumTitleElement = document.createElement("h3");
   albumTitleElement.textContent = albumTitle;
-  albumArtistElement.textContent = albumArtist;
+  albumTitleElement.classList.add("popup-album-title");
 
-  popupContainer.style.display = "block";
+  // Create the album artist element
+  const albumArtistElement = document.createElement("p");
+  albumArtistElement.textContent = albumArtist;
+  albumArtistElement.classList.add("popup-album-artist");
+
+  // Append the elements to the popup content
+  popupContent.appendChild(albumImageElement);
+  popupContent.appendChild(albumTitleElement);
+  popupContent.appendChild(albumArtistElement);
+
+  // Append the popup content to the popup container
+  popupContainer.appendChild(popupContent);
+
+  // Append the popup container to the root element
+  this.root.appendChild(popupContainer);
+
+  // Add a click event listener to the popup container to close the popup
+  popupContainer.addEventListener("click", () => {
+    this.closePopup(popupContainer);
+  });
 }
 
-document.addEventListener("DOMContentLoaded", () => {
-  const popupContainer = document.getElementById("popupContainer");
+closePopup(popupContainer) {
+  // Remove the popup container from the root element
+  this.root.removeChild(popupContainer);
+}
 
-  popupContainer.addEventListener("click", () => {
-    popupContainer.style.display = "none";
-  });
-});
+//discover pop-up function
+class DescriptionPopup {
+  constructor(root) {
+    this.root = root;
+  }
+
+  showPopup(description) {
+    const popupContainer = document.createElement("div");
+    popupContainer.classList.add("popup-container");
+
+    const popupContent = document.createElement("div");
+    popupContent.classList.add("popup-content");
+
+    const descriptionElement = document.createElement("p");
+    descriptionElement.textContent = description;
+    descriptionElement.classList.add("popup-description");
+
+    popupContent.appendChild(descriptionElement);
+    popupContainer.appendChild(popupContent);
+    this.root.appendChild(popupContainer);
+
+    popupContainer.addEventListener("click", () => {
+      this.closePopup(popupContainer);
+    });
+  }
+}

@@ -141,25 +141,4 @@ const wt = new MusicTracker(musicTracker);
 // Export the Music Tracker instance to the global scope for access in the console
 window.wt = wt;
 
-//discover onclick function
-function showAlbumDetails(element) {
-  const albumTitle = element.nextElementSibling.querySelector(".album__title").textContent;
-  const albumArtist = element.nextElementSibling.querySelector(".album__artist").textContent;
 
-  const popupContainer = document.getElementById("popupContainer");
-  const albumTitleElement = document.getElementById("albumTitle");
-  const albumArtistElement = document.getElementById("albumArtist");
-
-  albumTitleElement.textContent = albumTitle;
-  albumArtistElement.textContent = albumArtist;
-
-  popupContainer.style.display = "block";
-}
-
-document.addEventListener("DOMContentLoaded", () => {
-  const popupContainer = document.getElementById("popupContainer");
-
-  popupContainer.addEventListener("click", () => {
-    popupContainer.style.display = "none";
-  });
-});
