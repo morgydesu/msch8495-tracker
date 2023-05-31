@@ -3,8 +3,6 @@ header {
   height: 100%;
   width: 100%;
   background-color: #eb5160;
-  align-items: left;
-  justify-content: left;
 }
 
 header img {
@@ -12,3 +10,8 @@ header img {
   padding-left: 50px;
 }
 
+.logo  {
+  // margin: 0;
+  align-items: left;
+  justify-content: left;
+}

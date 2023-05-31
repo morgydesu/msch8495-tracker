@@ -59,20 +59,7 @@ class MusicTracker {
   static html() {
     return `
       <div class="music-tracker">
-        <div class="tracker__inputs">
-          <input type="text" class="tracker__song" placeholder="Type song from discover">
-          <select class="tracker__BPM" placeholder="Select speed">
-            <option value="0" selected disabled>Select option</option>                
-            <option value="60~90 BPM" data-img_src="./bpm_image/low-speed.png">60~90 BPM</option>
-            <option value="100~150 BPM" data-img_src="./bpm_image/medium-speed.png">100~150 BPM</option>
-            <option value="150~180+ BPM" data-img_src="./bpm_image/high-speed.png">150~180+ BPM</option>
-          </select>
-          <div class="tracker__bpm-image">
-            <img src="" style="display: none;">
-          </div>
-          <button class="tracker__add">+</button>
-        </div>
-      </div>
+       
       <div class="entry-list"></div>
     `;
   }

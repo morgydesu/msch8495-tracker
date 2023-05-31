@@ -1,12 +1,11 @@
-
-// MusicTracker function
+// Music Tracker Function
 class MusicTracker {
   static LOCAL_STORAGE_DATA_KEY = "music-tracker-entries";
   counter = 1;
 
   constructor(root) {
     this.root = root;
-    this.root.innerHTML = MusicTracker.html();
+    this.root.insertAdjacentHTML("afterbegin", MusicTracker.html());
     this.entries = [];
 
     this.loadEntries();
@@ -18,30 +17,35 @@ class MusicTracker {
       const month = (date.getMonth() + 1).toString().padStart(2, "0");
       const day = date.getDate().toString().padStart(2, "0");
 
-      const selectedOption = this.root.querySelector(".tracker__BPM").options[this.root.querySelector(".tracker__BPM").selectedIndex];
-      const imagePath = selectedOption.getAttribute("data-img_src");
-
       const newEntry = {
         ID: this.getNextID(),
         song: this.root.querySelector(".tracker__song").value,
-        bpm: selectedOption.text,
-        image: imagePath,
+        bpm: this.root.querySelector(".tracker__BPM").value,
         date: `${year}-${month}-${day}`,
       };
 
       this.addEntry(newEntry);
     });
 
-    this.root.querySelector(".tracker__BPM").addEventListener("change", (event) => {
-      const selectedOption = event.target.options[event.target.selectedIndex];
-      const imagePath = selectedOption.getAttribute("data-img_src");
-      const imageElement = this.root.querySelector(".tracker__bpm-image img");
-      if (imagePath) {
-        imageElement.src = imagePath;
-        imageElement.style.display = "block";
-      } else {
-        imageElement.src = "";
-        imageElement.style.display = "none";
+    this.root.querySelector(".tracker__entries").addEventListener("click", (event) => {
+      if (event.target.classList.contains("tracker__song")) {
+        event.target.value = "";
+      }
+    });
+
+    this.root.querySelector(".tracker__entries").addEventListener("change", (event) => {
+      if (event.target.classList.contains("tracker__BPM")) {
+        const selectedOption = event.target.options[event.target.selectedIndex];
+        const imagePath = selectedOption.getAttribute("data-image");
+        const imageElement = event.target.parentElement.querySelector(".tracker__bpm-image");
+        if (imagePath) {
+          imageElement.src = imagePath;
+          event.target.parentElement.classList.remove("empty");
+        } else {
+          imageElement.src = "";
+          event.target.parentElement.classList.add("empty");
+        }
+        this.saveEntries();
       }
     });
   }
@@ -55,27 +59,29 @@ class MusicTracker {
     });
     return maxID + 1;
   }
-
+  
   static html() {
     return `
+    <div class="logo">
+      <img src="./images/logo.png" alt="Logo">
+    </div>
+
       <div class="music-tracker">
         <div class="tracker__inputs">
           <input type="text" class="tracker__song" placeholder="Type song from discover">
           <select class="tracker__BPM" placeholder="Select speed">
-            <option value="0" selected disabled>Select option</option>                
-            <option value="60~90 BPM" data-img_src="./bpm_image/low-speed.png">60~90 BPM</option>
-            <option value="100~150 BPM" data-img_src="./bpm_image/medium-speed.png">100~150 BPM</option>
-            <option value="150~180+ BPM" data-img_src="./bpm_image/high-speed.png">150~180+ BPM</option>
+            <option value="" selected disabled>Select option</option>
+            <option value="60~90 BPM" data-image="./images/low-speed.png">60~90 BPM</option>
+            <option value="100~150 BPM" data-image="./images/medium-speed.png">100~150 BPM</option>
+            <option value="150~180+ BPM" data-image="./images/high-speed.png">150~180+ BPM</option>
           </select>
-          <div class="tracker__bpm-image">
-            <img src="" style="display: none;">
-          </div>
-          <button class="tracker__add">+</button>
-        </div>
+  <img class="tracker__bpm-image" src="data-image" alt="BPM Image">
+         <button class="tracker__add">+</button>
+     </div>
       </div>
       <div class="entry-list"></div>
     `;
-  }
+  }  
 
   addEntry(entry) {
     this.entries.push(entry);
@@ -108,10 +114,6 @@ class MusicTracker {
       const listItem = document.createElement("div");
       listItem.textContent = `ID: ${entry.ID}, Song: ${entry.song}, BPM: ${entry.bpm}, Date: ${entry.date}`;
 
-      const imageElement = document.createElement("img");
-      imageElement.src = entry.image;
-      listItem.appendChild(imageElement);
-
       const deleteButton = document.createElement("button");
       deleteButton.textContent = "X";
       deleteButton.addEventListener("click", () => {
@@ -135,7 +137,10 @@ class MusicTracker {
   }
 }
 
+// Create the Music Tracker instance and attach it to the "music-tracker" div
 const musicTracker = document.getElementById("music-tracker");
 const mt = new MusicTracker(musicTracker);
 
+// Export the Music Tracker instance to the global scope for access in the console
 window.mt = mt;
+

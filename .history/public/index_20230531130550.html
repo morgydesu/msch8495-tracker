@@ -8,47 +8,23 @@
     <script src="musictracker.js" type = "module"></script>
     <script src="discover.js"></script>
     <link rel="stylesheet" href = "./scss/main.scss">
-    <!-- this is the css to the down arrow button for discover -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>  
 <body>  
 
   <!-- This is the logo -->
   <header>
-      <img src="./logo_image/logo.png" alt="Logo">
+    <div class="logo"> -->
+      <img src="./images/logo.png" alt="Logo">
+    </div>
   </header>
 
 <!-- Music Tracker section -->
-<!-- <div class="music-tracker" id="music-tracker">
-</div> -->
+<div class="music-tracker" id="music-tracker">
+</div>
 
   <!-- Play List section -->
-<!-- <div class="entry-list" id="entry-list">
+<div class="entry-list" id="entry-list">
   <ul></ul>
-</div> -->
-
-
-<img src="./bpm_image/low-speed.png" alt="Logo">
-
-
-<!-- Music Tracker section -->
-<div class="music-tracker" id="music-tracker">
-  <!-- music tracker input list -->
-            <div class="tracker__inputs">
-              <input type="text" class="tracker__song" placeholder="Type song from discover">
-              <select class="tracker__BPM" placeholder="Select speed">
-                <option value="0" selected disabled>Select option</option>                
-                <option value="60~90 BPM" img src="./bpm_image/low-speed.png">60~90 BPM</option>
-                <option value="100~150 BPM" img src="./bpm_image/medium-speed.png">100~150 BPM</option>
-                <option value="150~180+ BPM" img src="./bpm_image/high-speed.png">150~180+ BPM</option>
-              </select>
-              <div class="tracker__bpm-image">
-              </div>
-              <button class="tracker__add">+</button>
-            </div>
-          </div>
-    <!-- Play List section -->
-          <div class="entry-list"></div>
 </div>
 
 <!-- This is the discovery page -->
@@ -61,7 +37,7 @@
   <!-- album 1 -->
   <div class="album">
     <div class="album__image">
-      <img src="./discover_image/album1.png" alt="Album 1">
+      <img src="./images/album1.png" alt="Album 1">
     </div>
     <button class="album__toggle" onclick="toggleAlbumDetails(this)">
       <i class="fas fa-chevron-down"></i>
@@ -76,7 +52,7 @@
   <!-- album 2 -->
   <div class="album">
     <div class="album__image">
-      <img src="./discover_image/album2.png" alt="Album 2">
+      <img src="./images/album2.png" alt="Album 2">
     </div>
     <button class="album__toggle" onclick="toggleAlbumDetails(this)">
       <i class="fas fa-chevron-down"></i>
@@ -91,7 +67,7 @@
   <!-- album 3 -->
   <div class="album">
     <div class="album__image">
-      <img src="./discover_image/album3.png" alt="Album 3">
+      <img src="./images/album3.png" alt="Album 3">
     </div>
     <button class="album__toggle" onclick="toggleAlbumDetails(this)">
       <i class="fas fa-chevron-down"></i>
@@ -106,7 +82,7 @@
   <!-- album 4 -->
   <div class="album">
     <div class="album__image">
-      <img src="./discover_image/album4.png" alt="Album 4">
+      <img src="./images/album4.png" alt="Album 4">
     </div>
     <button class="album__toggle" onclick="toggleAlbumDetails(this)">
       <i class="fas fa-chevron-down"></i>
@@ -127,7 +103,7 @@
   <!-- album 5 -->
   <div class="album">
     <div class="album__image">
-      <img src="./discover_image/album5.png" alt="Album 5">
+      <img src="./images/album5.png" alt="Album 5">
     </div>
     <button class="album__toggle" onclick="toggleAlbumDetails(this)">
       <i class="fas fa-chevron-down"></i>
@@ -142,7 +118,7 @@
   <!-- album 6 -->
   <div class="album">
     <div class="album__image">
-      <img src="./discover_image/album6.png" alt="Album 6">
+      <img src="./images/album6.png" alt="Album 6">
     </div>
     <button class="album__toggle" onclick="toggleAlbumDetails(this)">
       <i class="fas fa-chevron-down"></i>
@@ -157,7 +133,7 @@
   <!-- album 7 -->
   <div class="album">
     <div class="album__image">
-      <img src="./discover_image/album7.png" alt="Album 7">
+      <img src="./images/album7.png" alt="Album 7">
     </div>
     <button class="album__toggle" onclick="toggleAlbumDetails(this)">
       <i class="fas fa-chevron-down"></i>
@@ -172,7 +148,7 @@
   <!-- album 8 -->
   <div class="album">
     <div class="album__image">
-      <img src="./discover_image/album8.png" alt="Album 8">
+      <img src="./images/album8.png" alt="Album 8">
     </div>
     <button class="album__toggle" onclick="toggleAlbumDetails(this)">
       <i class="fas fa-chevron-down"></i>
@@ -192,7 +168,7 @@
   <!-- album 9 -->
   <div class="album">
     <div class="album__image">
-      <img src="./discover_image/album9.png" alt="Album 9">
+      <img src="./images/album9.png" alt="Album 9">
     </div>
     <button class="album__toggle" onclick="toggleAlbumDetails(this)">
       <i class="fas fa-chevron-down"></i>
@@ -207,7 +183,7 @@
   <!-- album 10 -->
   <div class="album">
     <div class="album__image">
-      <img src="./discover_image/album10.png" alt="Album 10">
+      <img src="./images/album10.png" alt="Album 10">
     </div>
     <button class="album__toggle" onclick="toggleAlbumDetails(this)">
       <i class="fas fa-chevron-down"></i>
@@ -222,7 +198,7 @@
   <!-- album 11 -->
   <div class="album">
     <div class="album__image">
-      <img src="./discover_image/album11.png" alt="Album 11">
+      <img src="./images/album11.png" alt="Album 11">
     </div>
     <button class="album__toggle" onclick="toggleAlbumDetails(this)">
       <i class="fas fa-chevron-down"></i>
@@ -237,7 +213,7 @@
   <!-- album 12 -->
   <div class="album">
     <div class="album__image">
-      <img src="./discover_image/album12.png" alt="Album 12">
+      <img src="./images/album12.png" alt="Album 12">
     </div>
     <button class="album__toggle" onclick="toggleAlbumDetails(this)">
       <i class="fas fa-chevron-down"></i>

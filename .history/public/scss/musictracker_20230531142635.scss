@@ -56,10 +56,10 @@
   align-items: center;
 }
 
-/* .tracker__bpm-image {
+.tracker__bpm-image {
   order: -1;
   margin-right: 5px;
-} */
+}
 
 .tracker__bpm-container:not(.empty) .tracker__bpm-image {
   display: inline-block;
@@ -143,6 +143,7 @@
 }
 
 
+//updated css for entry list and tracker
 body {
   display: flex;
   justify-content: center;
@@ -187,12 +188,16 @@ body {
   border-radius: 10px;
 }
 
-    .tracker__bpm-image img {
-      width: 20%;
-      height: 20%;
-    }
+//the BPM image
+.tracker__bpm-image {
+  margin-top: 10px;
+}
 
- .entry-list img {
-      width: 20%;
-      height: 20%;
-    }
+.tracker__bpm-image img {
+  max-width: 100%;
+  height: auto;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.1);
+}
+
