@@ -1,0 +1,228 @@
+  <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music tracker with HTML, CSS & JavaScript</title>
+    <script src="main.js" type = "module"></script>
+    <link rel="stylesheet" href = "./scss/main.scss">
+</head>  
+<body>  
+
+  <header>
+    <div class="logo">
+      <img src="logo.png" alt="Logo">
+    </div>
+  </header>
+
+<div class="music-tracker" id="music-tracker">
+  <!-- Music Tracker section -->
+</div>
+
+<div class="entry-list" id="entry-list">
+  <!-- Entry List section -->
+  <ul></ul>
+</div>
+
+<!-- This is the discovery page -->
+<h1>Discover</h1>
+
+<!-- Slow Speed -->
+<div class="genre__bpm">
+  <h2 class="genre__title">60~90 BPM</h2>
+  <h3 class="genre__title">Slow Speed</h3>
+  <!-- album 1 -->
+  <div class="album">
+    <div class="album__image">
+      <img src="album1.png" alt="Album 1">
+    </div>
+    <button class="album__toggle" onclick="toggleAlbumDetails(this)">
+      <i class="fas fa-chevron-down"></i>
+    </button>
+    <div class="album__details">
+      <div class="album__title">Butterfly</div>
+      <div class="album__bpm">60 BPM</div>
+      <div class="album__year">2020</div>
+    </div>
+  </div>
+
+  <!-- album 2 -->
+  <div class="album">
+    <div class="album__image">
+      <img src="album2.png" alt="Album 2">
+    </div>
+    <button class="album__toggle" onclick="toggleAlbumDetails(this)">
+      <i class="fas fa-chevron-down"></i>
+    </button>
+    <div class="album__details">
+      <div class="album__title">Pink Rose</div>
+      <div class="album__bpm">90 BPM</div>
+      <div class="album__year">2023</div>
+    </div>
+  </div>
+
+  <!-- album 3 -->
+  <div class="album">
+    <div class="album__image">
+      <img src="album3.png" alt="Album 3">
+    </div>
+    <button class="album__toggle" onclick="toggleAlbumDetails(this)">
+      <i class="fas fa-chevron-down"></i>
+    </button>
+    <div class="album__details">
+      <div class="album__title">Pink Gravity</div>
+      <div class="album__bpm">70 BPM</div>
+      <div class="album__year">2022</div>
+    </div>
+  </div>
+
+  <!-- album 4 -->
+  <div class="album">
+    <div class="album__image">
+      <img src="album4.png" alt="Album 4">
+    </div>
+    <button class="album__toggle" onclick="toggleAlbumDetails(this)">
+      <i class="fas fa-chevron-down"></i>
+    </button>
+    <div class="album__details">
+      <div class="album__title">Pink Lady</div>
+      <div class="album__bpm">90 BPM</div>
+      <div class="album__year">2010</div>
+    </div>
+  </div>
+
+<!-- medium speed -->
+<div class="genre__bpm">
+  <h2 class="genre__title">100~150 BPM</h2>
+  <h3 class="genre__title">Medium Speed</h3>
+
+  <!-- album 5 -->
+  <div class="album">
+    <div class="album__image">
+      <img src="album5.png" alt="Album 5">
+    </div>
+    <button class="album__toggle" onclick="toggleAlbumDetails(this)">
+      <i class="fas fa-chevron-down"></i>
+    </button>
+    <div class="album__details">
+      <div class="album__title">Feels</div>
+      <div class="album__bpm">135 BPM</div>
+      <div class="album__year">2020</div>
+    </div>
+  </div>
+
+  <!-- album 6 -->
+  <div class="album">
+    <div class="album__image">
+      <img src="album6.png" alt="Album 6">
+    </div>
+    <button class="album__toggle" onclick="toggleAlbumDetails(this)">
+      <i class="fas fa-chevron-down"></i>
+    </button>
+    <div class="album__details">
+      <div class="album__title">Eye Candy</div>
+      <div class="album__bpm">120 BPM</div>
+      <div class="album__year">2017</div>
+    </div>
+  </div>
+
+  <!-- album 7 -->
+  <div class="album">
+    <div class="album__image">
+      <img src="album7.png" alt="Album 7">
+    </div>
+    <button class="album__toggle" onclick="toggleAlbumDetails(this)">
+      <i class="fas fa-chevron-down"></i>
+    </button>
+    <div class="album__details">
+      <div class="album__title">Summer B</div>
+      <div class="album__bpm">100 BPM</div>
+      <div class="album__year">2023</div>
+    </div>
+  </div>
+
+  <!-- album 8 -->
+  <div class="album">
+    <div class="album__image">
+      <img src="album8.png" alt="Album 8">
+    </div>
+    <button class="album__toggle" onclick="toggleAlbumDetails(this)">
+      <i class="fas fa-chevron-down"></i>
+    </button>
+    <div class="album__details">
+      <div class="album__title">Somebody</div>
+      <div class="album__bpm">120 BPM</div>
+      <div class="album__year">2019</div>
+    </div>
+  </div>
+
+<!-- Fast speed -->
+<div class="genre__bpm">
+  <h2 class="genre__title">150~180+ BPM</h2>
+  <h3 class="genre__title">Fast Speed</h3>
+  <!-- album 9 -->
+  <div class="album">
+    <div class="album__image">
+      <img src="album9.png" alt="Album 9">
+    </div>
+    <button class="album__toggle" onclick="toggleAlbumDetails(this)">
+      <i class="fas fa-chevron-down"></i>
+    </button>
+    <div class="album__details">
+      <div class="album__title">Disco Tech</div>
+      <div class="album__bpm">170 BPM</div>
+      <div class="album__year">2021</div>
+    </div>
+  </div>
+
+  <!-- album 10 -->
+  <div class="album">
+    <div class="album__image">
+      <img src="album10.png" alt="Album 10">
+    </div>
+    <button class="album__toggle" onclick="toggleAlbumDetails(this)">
+      <i class="fas fa-chevron-down"></i>
+    </button>
+    <div class="album__details">
+      <div class="album__title">Zeus</div>
+      <div class="album__bpm">125 BPM</div>
+      <div class="album__year">2009</div>
+    </div>
+  </div>
+
+  <!-- album 11 -->
+  <div class="album">
+    <div class="album__image">
+      <img src="album11.png" alt="Album 11">
+    </div>
+    <button class="album__toggle" onclick="toggleAlbumDetails(this)">
+      <i class="fas fa-chevron-down"></i>
+    </button>
+    <div class="album__details">
+      <div class="album__title">The Pretender</div>
+      <div class="album__bpm">172 BPM</div>
+      <div class="album__year">2007</div>
+    </div>
+  </div>
+
+  <!-- album 12 -->
+  <div class="album">
+    <div class="album__image">
+      <img src="album12.png" alt="Album 12">
+    </div>
+    <button class="album__toggle" onclick="toggleAlbumDetails(this)">
+      <i class="fas fa-chevron-down"></i>
+    </button>
+    <div class="album__details">
+      <div class="album__title">Random</div>
+      <div class="album__bpm">170 BPM</div>
+      <div class="album__year">2011</div>
+    </div>
+  </div>
+</div>
+</body>
+</html>
+
+
+

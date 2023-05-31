@@ -62,16 +62,14 @@ class MusicTracker {
   
   static html() {
     return `
-    <div class="header">
-    <img src="trackerlogo.png" alt="Logo">
-  </div>
       <div class="music-tracker">
         <div class="tracker__inputs">
           <input type="text" class="tracker__song" placeholder="Type song from discover">
           <select class="tracker__BPM" placeholder="Select speed">
-            <option value="60~90 BPM" data-image="path_to_slow_image.png">60~90 BPM</option>
-            <option value="100~150 BPM" data-image="path_to_medium_image.png">100~150 BPM</option>
-            <option value="150~180+ BPM" data-image="path_to_fast_image.png">150~180+ BPM</option>
+            <option value="" selected disabled>Select option</option>
+            <option value="60~90 BPM" data-image="low-speed.png">60~90 BPM</option>
+            <option value="100~150 BPM" data-image="medium-speed.png">100~150 BPM</option>
+            <option value="150~180+ BPM" data-image="high-speed.png">150~180+ BPM</option>
           </select>
           <button class="tracker__add">+</button>
         </div>
@@ -79,6 +77,7 @@ class MusicTracker {
       <div class="entry-list"></div>
     `;
   }
+  
 
   addEntry(entry) {
     this.entries.push(entry);
@@ -136,30 +135,18 @@ class MusicTracker {
 
 // Create the Music Tracker instance and attach it to the "music-tracker" div
 const musicTracker = document.getElementById("music-tracker");
-const wt = new MusicTracker(musicTracker);
+const mt = new MusicTracker(musicTracker);
 
 // Export the Music Tracker instance to the global scope for access in the console
-window.wt = wt;
+window.mt = mt;
+
+
 
 //discover onclick function
-function showAlbumDetails(element) {
-  const albumTitle = element.nextElementSibling.querySelector(".album__title").textContent;
-  const albumArtist = element.nextElementSibling.querySelector(".album__artist").textContent;
+function toggleAlbumDetails(button) {
+  const album = button.parentNode;
+  const albumDetails = album.querySelector('.album__details');
 
-  const popupContainer = document.getElementById("popupContainer");
-  const albumTitleElement = document.getElementById("albumTitle");
-  const albumArtistElement = document.getElementById("albumArtist");
-
-  albumTitleElement.textContent = albumTitle;
-  albumArtistElement.textContent = albumArtist;
-
-  popupContainer.style.display = "block";
+  albumDetails.classList.toggle('show');
 }
 
-document.addEventListener("DOMContentLoaded", () => {
-  const popupContainer = document.getElementById("popupContainer");
-
-  popupContainer.addEventListener("click", () => {
-    popupContainer.style.display = "none";
-  });
-});

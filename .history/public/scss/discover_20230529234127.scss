@@ -1,0 +1,153 @@
+h1 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.genre__bpm {
+  margin-bottom: 40px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  justify-content: center;
+}
+
+h2.genre__title {
+  font-size: 20px;
+  margin-bottom: 0px;
+  margin-left: 10px;
+  width: 100%;
+  text-align: left;
+}
+
+h3.genre__title {
+  font-size: 15px;
+  margin-bottom: 10px;
+  margin-left: 10px;
+  margin-top: 0px;
+  width: 100%;
+  text-align: left;
+}
+
+.album {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+  width: 200px; /* Adjust the width as needed */
+}
+
+.album__image {
+  width: 100px;
+  height: 100px;
+  background-color: #888;
+  margin-bottom: 10px;
+}
+
+.album__title,
+.album__bpm {
+  font-size: 16px;
+  text-align: center;
+}
+
+/* Adjust the background images and content as needed */
+.album:nth-child(2n) .album__image {
+  background-color: #aaa;
+}
+
+.album:nth-child(3n) .album__image {
+  background-color: #bbb;
+}
+
+/* Add some hover effect for the albums */
+.album:hover {
+  transform: scale(1.05);
+}
+
+.album:hover .album__image {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+#discover-page {
+  width: 100%;
+  max-width: 600px;
+  margin: 20px auto;
+}
+
+
+//discover on-click function css
+.genre__bpm {
+  margin-bottom: 20px;
+}
+
+.genre__title {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.album {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.album__image {
+  width: 80px;
+  height: 80px;
+  background-color: #ddd;
+  cursor: pointer;
+}
+
+.album__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.album__details {
+  margin-left: 10px;
+}
+
+.album__title {
+  font-weight: bold;
+}
+
+.album__year
+.album__bpm {
+  color: #666;
+}
+
+.popup-container {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 999;
+}
+
+.popup-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 20px;
+  background-color: #fff;
+  text-align: center;
+}
+
+.popup-title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.popup-artist {
+  font-size: 18px;
+}
