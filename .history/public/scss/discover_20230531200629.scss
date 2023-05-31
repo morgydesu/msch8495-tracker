@@ -1,0 +1,112 @@
+.genre__bpm {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  flex-direction: row;
+}
+
+h1 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+}
+
+h2.genre__title {
+  font-size: 20px;
+  margin-bottom: 0px;
+  margin-left: 10px;
+  width: 100%;
+  text-align: left;
+  font-weight: bold;
+}
+
+h3.genre__title {
+  font-size: 15px;
+  margin-bottom: 10px;
+  margin-left: 10px;
+  margin-top: 0px;
+  width: 100%;
+  text-align: left;
+}
+
+.album__image {
+  background-color: #aaa;
+  border-bottom: ridge;
+  margin: 20px;
+  background-size: 50% 50%;
+}
+
+ /* Add some hover effect for the albums */
+.album:hover {
+  transform: scale(1.05);
+}
+
+
+.album {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10px;
+  background-color: #aaa;
+  margin: 20px;
+  box-shadow: 5px 5px #888888;
+  border-radius: 10px;
+}
+
+.album__details.show {
+  display: block;
+}
+
+.album__toggle {
+  // bottom: 50px;
+  // left: 50%;
+  // transform: translateX(115%);
+  // display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100px;
+  height: 40px;
+  color: #888;
+  cursor: pointer;
+}
+
+
+.album__toggle:hover {
+  color: #555;
+}
+
+.album__toggle .fas {
+  transition: transform 0.3s;
+}
+
+.album__toggle.active .fas {
+  transform: rotate(180deg);
+}
+
+
+.album__details {
+  display: none;
+  padding: 10px;
+  background-color: #f5f5f5;
+}
+
+.album__details .album__title {
+  font-weight: bold;
+}
+
+.album__details .album__bpm,
+.album__details .album__year {
+  font-size: 14px;
+  color: #666;
+}
+
+.album__image {
+  padding: 10px;
+}
+

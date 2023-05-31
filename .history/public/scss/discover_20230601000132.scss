@@ -1,0 +1,115 @@
+h1 {
+  font-size: 40px;
+  margin-bottom: -35px;
+  margin-left: 20px;
+  text-align: left;
+  display: flex;
+  font-weight: bold;
+}
+
+h2.genre__title {
+  font-size: 20px;
+  margin-bottom: 0px;
+  margin-left: 10px;
+  width: 100%;
+  text-align: left;
+  font-weight: bold;
+  color: #aaa;
+}
+
+h3.genre__title {
+  font-size: 15px;
+  margin-bottom: 10px;
+  margin-left: 10px;
+  margin-top: 0px;
+  margin-bottom: -5px;
+  width: 100%;
+  text-align: left;
+}
+
+.genre__bpm {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: left;
+  align-items: left;
+  padding: 10px;
+}
+
+
+// The album feature
+.album {
+  align-items: left;
+  justify-content: left;
+  background-color: #aaa;
+  margin: 10px;
+  box-shadow: 10px 10px;
+  border-radius: 10px;
+}
+
+.album:hover {
+  transform: scale(1.05);
+}
+
+.album__image {
+  border-bottom: ridge;
+  margin: 10px;
+}
+
+.album__image img {
+  width: 150px;
+  height: 150px;
+}
+
+// The button feature 
+.album__toggle {
+  justify-content: center;
+  align-content: center;
+  width: 80px;
+  height: 20px;
+  cursor: pointer;
+  transition: transform 0.3s;
+  margin-left: 50px;
+  margin-bottom: 10px;
+}
+
+.album__toggle .fas {
+  transition: transform 0.3s;
+  display: block; /* Add this line to change the display to block */
+  margin-top: 5px; /* Adjust the margin-top as needed */
+  align-content: center;
+  font-size: 14px;
+}
+
+.album__toggle:hover {
+  color: #555;
+}
+
+
+// The text inside the dropdown button
+.album__details {
+  display: none;
+  padding: 10px;
+  background-color: #f5f5f5;
+  text-align: left;
+}
+
+.album__details.show {
+  display: block;
+}
+
+.album__title {
+  font-weight: bold;
+  font-size: larger;
+}
+
+.album__bpm,
+.album__year {
+  font-size: smaller;
+  color: #666;
+}
+
+
+
+
+
+  
