@@ -3,6 +3,12 @@ import lowSpeedImage from './bpm_image/low-speed.png';
 import mediumSpeedImage from './bpm_image/medium-speed.png';
 import highSpeedImage from './bpm_image/high-speed.png';
 
+static imagePaths = {
+  "60~90 BPM": lowSpeedImage,
+  "100~150 BPM": mediumSpeedImage,
+  "150~180+ BPM": highSpeedImage
+};
+
 
 // MusicTracker function
 class MusicTracker {
@@ -68,7 +74,7 @@ class MusicTracker {
           <input type="text" class="tracker__song" placeholder="Type song from discover">
           <select class="tracker__BPM" placeholder="Select speed">
             <option value="0" selected disabled>Select option</option>                
-            <option value="60~90 BPM" data-img_src="lowSpeedImage">60~90 BPM</option>
+            <option value="60~90 BPM" data-img_src="./bpm_image/low-speed.png">60~90 BPM</option>
             <option value="100~150 BPM" data-img_src="./bpm_image/medium-speed.png">100~150 BPM</option>
             <option value="150~180+ BPM" data-img_src="./bpm_image/high-speed.png">150~180+ BPM</option>
           </select>

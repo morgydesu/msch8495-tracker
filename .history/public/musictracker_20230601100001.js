@@ -1,7 +1,6 @@
 //import the bpm image 
-import lowSpeedImage from './bpm_image/low-speed.png';
-import mediumSpeedImage from './bpm_image/medium-speed.png';
-import highSpeedImage from './bpm_image/high-speed.png';
+import "data-img_src"* from ['./bpm_image/low-speed.png', './bpm_image/medium-speed.png', './bpm_image/high-speed.png'];
+
 
 
 // MusicTracker function
@@ -39,7 +38,7 @@ class MusicTracker {
 
     this.root.querySelector(".tracker__BPM").addEventListener("change", (event) => {
       const selectedOption = event.target.options[event.target.selectedIndex];
-      const imagePaths = selectedOption.getAttribute("data-img_src");
+      const imagePath = selectedOption.getAttribute("data-img_src");
       const imageElement = this.root.querySelector(".tracker__bpm-image img");
       if (imagePath) {
         imageElement.src = imagePath;
@@ -68,7 +67,7 @@ class MusicTracker {
           <input type="text" class="tracker__song" placeholder="Type song from discover">
           <select class="tracker__BPM" placeholder="Select speed">
             <option value="0" selected disabled>Select option</option>                
-            <option value="60~90 BPM" data-img_src="lowSpeedImage">60~90 BPM</option>
+            <option value="60~90 BPM" data-img_src="./bpm_image/low-speed.png">60~90 BPM</option>
             <option value="100~150 BPM" data-img_src="./bpm_image/medium-speed.png">100~150 BPM</option>
             <option value="150~180+ BPM" data-img_src="./bpm_image/high-speed.png">150~180+ BPM</option>
           </select>
