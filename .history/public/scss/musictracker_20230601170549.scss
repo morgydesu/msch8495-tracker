@@ -11,9 +11,27 @@
   justify-content: right;
 }
 
-// .tracker__entries .tracker__row:nth-child(odd) {
-//   background: #dddddd;
-// }
+.tracker th {
+  font-size: 1.15em;
+  text-align: left;
+  font-weight: normal;
+  color: #ffffff;
+  background: #eb5160;
+  padding: 10px; /* Adjusted padding */
+}
+
+.tracker th,
+.tracker td {
+  padding: 10px; /* Adjusted padding */
+}
+
+.tracker__entries .tracker__row {
+  background: #eeeeee;
+}
+
+.tracker__entries .tracker__row:nth-child(odd) {
+  background: #dddddd;
+}
 
 .tracker__date,
 .tracker__song,

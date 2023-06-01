@@ -1,21 +1,41 @@
+
 /* Music Tracker Playlist */
 // this is the tracker function css
 .tracker__inputs{
   font-size: 14px;
   border-collapse: collapse;
   width: 100%;
-  max-width: 300px; /* Added to limit the width */
+  max-width: 600px; /* Added to limit the width */
   margin-right: -10px; /* Center horizontally */
   border-radius: 10px; /* Added to add curved edges */
   align-items: right;
   justify-content: right;
 }
 
-// .tracker__entries .tracker__row:nth-child(odd) {
-//   background: #dddddd;
-// }
+.tracker th {
+  font-size: 1.15em;
+  text-align: left;
+  font-weight: normal;
+  color: #ffffff;
+  background: #eb5160;
+  padding: 10px; /* Adjusted padding */
+}
+
+.tracker th,
+.tracker td {
+  padding: 10px; /* Adjusted padding */
+}
+
+.tracker__entries .tracker__row {
+  background: #eeeeee;
+}
+
+.tracker__entries .tracker__row:nth-child(odd) {
+  background: #dddddd;
+}
 
 .tracker__date,
+.tracker__BPM,
 .tracker__song,
 .tracker__ID {
   display: inline-block;
@@ -29,15 +49,42 @@
   width: 100%;
 }
 
+.tracker__bpm-container {
+  display: flex;
+  align-items: center;
+}
+
+.tracker__bpm-container:not(.empty) .tracker__bpm-image {
+  display: inline-block;
+}
+
 .tracker__add:hover {
   background: rgba(0, 0, 0, 0.1);
 }
 
+// .tracker__add {
+//   color: #eb5160;
+//   cursor: pointer;
+//   padding: 0.5em 1em; /* Adjusted padding */
+//   display: inline-block;
+//   font-size: 24px;
+//   margin-right: auto; /* Add this line to move the button to the right */
+// }
 .tracker__add {
   color: #eb5160;
   cursor: pointer;
+  padding: 1em 2em; /* Adjusted padding for a bigger button */
   display: inline-block;
   font-size: 24px;
+  margin-right: auto; /* Add this line to move the button to the right */
+}
+
+.tracker__add button {
+  color: #eb5160;
+  cursor: pointer;
+  padding: 1em 2em; /* Adjusted padding for a bigger button */
+  display: inline-block;
+  font-size: 50px;
   margin-right: auto; /* Add this line to move the button to the right */
 }
 
@@ -77,21 +124,6 @@
   background: rgba(0, 0, 0, 0.1);
 }
 
-.tracker__bpm {
-  // A reset of styles, including removing the default dropdown arrow
-  appearance: none;
-  // Additional resets for further consistency
-  background-color: transparent;
-  border: none;
-  padding: 0 1em 0 0;
-  margin: 0;
-  width: 100%;
-  font-family: inherit;
-  font-size: inherit;
-  cursor: inherit;
-  line-height: inherit;
-}
-
 .tracker__bpm-image img {
   width: 20%;
   height: 20%;
@@ -120,65 +152,6 @@ padding: 10px;
   align-items: flex-start;
   gap: 20px;
   justify-content: flex-end; /* Align content to the right side */
-}
-
-//the option value css; custom select down button 
-// Resetting the default style
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-}
-
-select {
-  // A reset of styles, including removing the default dropdown arrow
-  appearance: none;
-  // Additional resets for further consistency
-  margin: 0;
-  width: 100%;
-  font-family: inherit;
-  line-height: inherit;
-  outline: none;
-  min-width: 15ch;
-  max-width: 30ch;
-  border: 1px solid var(--select-border);
-  border-radius: 0.25em;
-  padding: 0.25em 0.5em;
-  font-size: 1.25rem;
-  cursor: pointer;
-  line-height: 1.1;
-  background-color: #fff;
-  background-image: linear-gradient(to top, #f9f9f9, #fff 33%);
-  display: grid;
-// ...existing styles
-  grid-template-areas: "select";
-// ...existing styles
-  align-items: center;
-}
-
-select::-ms-expand {
-  display: none;
-}
-
-:root {
-  --select-border: #777;
-  --select-focus: blue;
-  --select-arrow: var(--select-border);
-}
- 
-.select::after {
-  content: "";
-  width: 0.8em;
-  height: 0.5em;
-  background-color: var(--select-arrow);
-  clip-path: polygon(100% 0%, 0 0%, 50% 100%);
-// ...existing styles
-  justify-self: end;
-}
-
-select,
-.select:after {
-  grid-area: select;
 }
 
 

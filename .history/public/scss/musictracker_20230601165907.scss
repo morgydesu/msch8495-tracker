@@ -4,16 +4,34 @@
   font-size: 14px;
   border-collapse: collapse;
   width: 100%;
-  max-width: 300px; /* Added to limit the width */
+  // max-width: 600px; /* Added to limit the width */
   margin-right: -10px; /* Center horizontally */
   border-radius: 10px; /* Added to add curved edges */
   align-items: right;
   justify-content: right;
 }
 
-// .tracker__entries .tracker__row:nth-child(odd) {
-//   background: #dddddd;
-// }
+.tracker th {
+  font-size: 1.15em;
+  text-align: left;
+  font-weight: normal;
+  color: #ffffff;
+  background: #eb5160;
+  padding: 10px; /* Adjusted padding */
+}
+
+.tracker th,
+.tracker td {
+  padding: 10px; /* Adjusted padding */
+}
+
+.tracker__entries .tracker__row {
+  background: #eeeeee;
+}
+
+.tracker__entries .tracker__row:nth-child(odd) {
+  background: #dddddd;
+}
 
 .tracker__date,
 .tracker__song,
@@ -36,6 +54,8 @@
 .tracker__add {
   color: #eb5160;
   cursor: pointer;
+  padding: 0.5em 1em; /* Adjusted padding */
+  padding: 1em 2em; /* Adjusted padding for a bigger button */
   display: inline-block;
   font-size: 24px;
   margin-right: auto; /* Add this line to move the button to the right */

@@ -11,9 +11,13 @@
   justify-content: right;
 }
 
-// .tracker__entries .tracker__row:nth-child(odd) {
-//   background: #dddddd;
+// .tracker__entries .tracker__row {
+//   background: #eeeeee;
 // }
+
+.tracker__entries .tracker__row:nth-child(odd) {
+  background: #dddddd;
+}
 
 .tracker__date,
 .tracker__song,

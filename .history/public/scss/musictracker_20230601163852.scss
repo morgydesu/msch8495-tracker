@@ -1,41 +1,72 @@
+
+
 /* Music Tracker Playlist */
 // this is the tracker function css
 .tracker__inputs{
   font-size: 14px;
   border-collapse: collapse;
   width: 100%;
-  max-width: 300px; /* Added to limit the width */
+  max-width: 600px; /* Added to limit the width */
   margin-right: -10px; /* Center horizontally */
   border-radius: 10px; /* Added to add curved edges */
   align-items: right;
   justify-content: right;
 }
 
-// .tracker__entries .tracker__row:nth-child(odd) {
-//   background: #dddddd;
-// }
-
-.tracker__date,
-.tracker__song,
-.tracker__ID {
-  display: inline-block;
-  box-sizing: border-box;
-  font-size: 1em;
-  height: 2.5em;
-  padding: 5px; /* Adjusted padding */
-  border: none;
-  outline: none;
-  background: none;
-  width: 100%;
+.tracker th {
+  font-size: 1.15em;
+  text-align: left;
+  font-weight: normal;
+  color: #ffffff;
+  background: #eb5160;
+  padding: 10px; /* Adjusted padding */
 }
+
+.tracker th,
+.tracker td {
+  padding: 10px; /* Adjusted padding */
+}
+
+.tracker__entries .tracker__row {
+  background: #eeeeee;
+}
+
+.tracker__entries .tracker__row:nth-child(odd) {
+  background: #dddddd;
+}
+
+// .tracker__date,
+// .tracker__BPM,
+// .tracker__song,
+// .tracker__ID {
+//   display: inline-block;
+//   box-sizing: border-box;
+//   font-size: 1em;
+//   height: 2.5em;
+//   padding: 5px; /* Adjusted padding */
+//   border: none;
+//   outline: none;
+//   background: none;
+//   width: 100%;
+// }
 
 .tracker__add:hover {
   background: rgba(0, 0, 0, 0.1);
 }
 
+// .tracker__add {
+//   color: #eb5160;
+//   cursor: pointer;
+//   padding: 0.5em 1em; /* Adjusted padding */
+//   display: inline-block;
+//   font-size: 24px;
+//   margin-right: auto; /* Add this line to move the button to the right */
+// }
+
 .tracker__add {
   color: #eb5160;
   cursor: pointer;
+  padding: 1em 2em; /* Adjusted padding for a bigger button */
   display: inline-block;
   font-size: 24px;
   margin-right: auto; /* Add this line to move the button to the right */
@@ -152,8 +183,6 @@ select {
   display: grid;
 // ...existing styles
   grid-template-areas: "select";
-// ...existing styles
-  align-items: center;
 }
 
 select::-ms-expand {
@@ -172,14 +201,9 @@ select::-ms-expand {
   height: 0.5em;
   background-color: var(--select-arrow);
   clip-path: polygon(100% 0%, 0 0%, 50% 100%);
-// ...existing styles
-  justify-self: end;
 }
 
-select,
-.select:after {
-  grid-area: select;
-}
+
 
 
 // this is the entry list function css
