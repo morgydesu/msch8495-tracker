@@ -37,8 +37,7 @@ class MusicTracker {
       this.addEntry(newEntry);
     });
 
-    //adding the imported image into imagePaths
-    MusicTracker.imagePaths = {
+    static imagePaths = {
       "60~90 BPM": lowSpeedImage,
       "100~150 BPM": mediumSpeedImage,
       "150~180+ BPM": highSpeedImage
