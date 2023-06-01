@@ -1,9 +1,5 @@
 /* Music Tracker Playlist */
-// this is the tracker information css
-.tracker__inputs {
-  border-bottom: 5px solid red;
-}
-
+// this is the tracker function css
 .tracker__song {
   display: inline-block;
   box-sizing: border-box;
@@ -21,6 +17,13 @@
   padding: 0.25em 0.5em;
 }
 
+.tracker {
+  width: 100%;
+  border-collapse: collapse;
+  border-bottom: 5px solid red;
+
+}
+
 .tracker__add {
   display: flex;
   align-items: center;
@@ -34,6 +37,7 @@
   cursor: pointer;
   width: 30px;
   height: 30px;
+  
 }
 
 .tracker__add:hover {
