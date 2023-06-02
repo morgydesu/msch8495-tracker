@@ -1,0 +1,149 @@
+/* Music Tracker Playlist */
+// this is the tracker information css
+
+.tracker__inputs {
+  // padding: 0px;
+}
+
+.tracker__song {
+  display: inline-block;
+  box-sizing: border-box;
+  font-size: 1em;
+  height: 2.5em;
+  border: 1px;
+  outline: none;
+  background: #f9f9f9;
+  width: 100%;
+  min-width: 10%;
+  max-width: 40%;
+  border: 1px solid #1F2020;
+  border-radius: 0.25em;
+  padding: 0.25em 0.5em;
+  text-align: left;
+  color: #1F2020;
+  font-size: 0.8em;
+}
+
+.tracker__add {
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  border: none;
+  cursor: pointer;
+  // margin-left: auto;
+  margin-right: 10%;
+  background: none;
+  font-size: 1.5em;
+}
+
+.tracker__add::before {
+  content: "+";
+  color: #1F2020;
+  margin-right: auto;
+}
+
+.tracker__add:hover {
+  color: #eb5160;
+}
+
+.tracker__BPM {
+  background-color: #eb5160;
+  display: inline-block;
+  box-sizing: border-box;
+  font-size: 0.8em;
+  font-weight: bold;
+  color: #1F2020;
+  height: 2.5em;
+  border: 1px;
+  outline: none;
+  max-width: 80%;
+  border: 1px solid var(--select-border);
+  border-radius: 0.25em;
+  cursor: pointer;
+  margin-left: 5px;
+  margin-right: 20px;
+}
+
+//this is just the filter part of the tracker
+.music-tracker{
+  background: #f9f9f9;
+  padding: 10px;
+max-width: 100%;
+// border-bottom: 2px solid #AAAAAA;
+}
+
+.music-tracker div {
+  display: flex;
+  align-items: center;
+}
+
+
+// this is the placement of the music tracker css
+#music-tracker{
+  // background: #f9f9f9;
+background: #f9f9f9;
+padding: 10px;
+width: 40%;
+padding-top: 20px;
+border-radius: 5px;
+}
+
+// // this is controlling the whole placement of the music tracker
+.music-tracker 
+.entry-list{
+  display: flex;
+  justify-content: flex-end; /* Align content to the right side */
+  align-items: flex-start;
+  gap: 20px;
+  flex-direction: column;
+  width: 100%;
+  margin-left: auto; /* Move the music tracker to the right */
+  padding: 10px;
+  background: transparent;
+}
+
+// this is the entry list function css
+.entry-list {
+  width: 100%;
+  margin: 10px;
+  padding: 10px;
+  display: flex;
+  justify-content: flex-start; /* Align content to the left side */
+  // align-items: flex-start;
+  gap: 20px;
+  flex-direction: column;
+  height: 100%;
+  background: #f9f9f9;
+  color: #1F2020;
+}
+
+.entry-list div {
+  display: flex;
+  align-items: center;
+  border-bottom: 0.5px solid #AAAAAA;
+}
+
+.entry-list button {
+  margin-right: auto;
+  cursor: pointer;
+  align-items: center;
+  display: flex;
+  color: #1F2020;
+  font-size: 0.5em;
+  width: 20px;
+  height: 20px;
+  margin-left: auto;
+}
+
+.entry-list img {
+  width: 30%;
+  height: 30%;
+}
+
+//the option value css; custom select down button 
+// Resetting the default style
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}

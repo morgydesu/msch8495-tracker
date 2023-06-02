@@ -1,0 +1,281 @@
+//imports all of the other sub scss to the main scss
+@import "discover";
+@import "musictracker";
+@import "header";
+
+// This is the font Gotham Medium
+@font-face {
+  font-family: "Gotham Medium";
+  src: ("GothamMedium.ttf") format("truetype");
+}
+
+* {
+  font-family: "Gotham Medium";
+}
+
+//this is the scss for the whole tracker
+body{
+  background: #071013;
+ }
+
+/* Additional styles for positioning */
+.container {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+
+  /* Responsive Styles */
+//this is the css responsive style for the discover section
+// this is the mobile view
+@media (max-width: 640px) {
+  .discover-section {
+    width: 90%;
+    float: left;
+  }
+
+  .album__toggle {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  h1 {
+    font-size: 30px;
+    margin-left: 25px;
+    margin-top: 10px;
+  }
+
+  h2.genre__title {
+    font-size: 15px;
+    margin-left: 15px;
+  }
+  
+  h3.genre__title {
+    font-size: 10px;
+    margin-left: 15px;
+  }
+
+  .album {
+    background: #1F2020;
+    margin-right: -50px;
+    padding: 10px;
+    padding-top: 0px;
+    box-shadow: 10px 10px;
+    border-radius: 5px;
+  }
+  
+}
+
+/* Responsive styles for screen size 1009px and above */
+// this is the desktop view of discover
+@media (min-width: 1009px) {
+  .discover-section {
+    width: 70%;
+    float: left;
+  }
+
+  .album__toggle {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  h1 {
+    margin-left: 25px;
+    margin-top: 10px;
+  }
+
+  h2.genre__title {
+    margin-left: 15px;
+  }
+  
+  h3.genre__title {
+    margin-left: 15px;
+  }
+}
+
+//this is the responsive style for the music tracker 
+/* Responsive styles for screen size up to 640px */
+// this is the mobile view
+@media (max-width: 640px) {
+  .tracker__song {
+    height: 3em;
+    max-width: 30%;
+    font-size: 0.5em;
+    margin-right: 0%;
+    margin-left: -45%;
+    margin-top: -20%;
+    justify-content: flex-start; /* Align content to the left side */
+    align-items: flex-start;
+    display: flex;
+  }
+  
+  .tracker__add {
+    font-size: 1.5em;
+    padding: none;
+  }
+  
+  .tracker__add::before {
+    content: "+";
+    color: #071013;
+    margin-right: 0%;
+    margin-left: -1200%;
+    margin-top: -300%;
+    padding: none;
+    float:right;
+
+  }
+
+  .tracker__BPM {
+    font-size: 0.5em;
+    height: 3em;
+    max-width: 50%;
+    margin-right: 0%;
+    margin-left: 2%;
+    margin-top: -20%;
+    justify-content: flex-start; /* Align content to the left side */
+    align-items: flex-start;
+    display: flex;
+
+  }
+  
+.music-tracker {
+  justify-content: flex-start; /* Align content to the left side */
+    align-items: flex-start;
+}
+
+  .music-tracker div {
+    display: flex;
+    margin-right: 0%;
+    float:right;
+  }
+
+  #music-tracker{
+    float:right;
+    width: 40%; /* Adjust the width as needed */
+  }
+  .entry-list img {
+    width: 30px;
+    height: 30px;
+  }
+
+  .entry-list {
+    margin: 0px;
+    padding: 0px;
+  }
+  
+  .entry-list div {
+      font-size: 12px;
+  }
+  }
+
+
+/* Responsive styles for screen size 1009px and above */
+// this is the desktop view of the music tracker
+@media (min-width: 1009px) {
+  #music-tracker{
+    width: 35%;
+    float: right;
+  }
+
+  // .tracker__song {
+  //   height: 3em;
+  //   max-width: 30%;
+  //   font-size: 0.5em;
+  //   margin-right: 0%;
+  //   margin-left: -45%;
+  //   margin-top: -20%;
+  //   justify-content: flex-start; /* Align content to the left side */
+  //   align-items: flex-start;
+  //   display: flex;
+  // }
+  
+  // .tracker__add {
+  //   font-size: 1.5em;
+  //   padding: none;
+  // }
+  
+  // .tracker__add::before {
+  //   content: "+";
+  //   color: #071013;
+  //   margin-right: 0%;
+  //   margin-left: -1200%;
+  //   margin-top: -300%;
+  //   padding: none;
+  //   float:right;
+
+  // }
+
+  // .tracker__BPM {
+  //   font-size: 0.5em;
+  //   height: 3em;
+  //   max-width: 50%;
+  //   margin-right: 0%;
+  //   margin-left: 2%;
+  //   margin-top: -20%;
+  //   justify-content: flex-start; /* Align content to the left side */
+  //   align-items: flex-start;
+  //   display: flex;
+
+  // }
+  
+// .music-tracker {
+//   justify-content: flex-start; /* Align content to the left side */
+//     align-items: flex-start;
+// }
+
+  // .music-tracker div {
+  //   display: flex;
+  //   margin-right: 0%;
+  //   float:right;
+  // }
+
+  // .entry-list img {
+  //   width: 30px;
+  //   height: 30px;
+  // }
+
+  .entry-list {
+    margin: 0px;
+    padding: 0px;
+  }
+  
+  .entry-list div {
+      font-size: 12px;
+  }
+
+}
+
+
+//this is the css responsive style for the header 
+// this is the mobile view
+@media (max-width: 640px) {
+  header {
+    height: 20%;
+  }
+
+  .logo img {
+    width: 30%;
+    margin-left: 20px;
+    margin-bottom: 5px;
+  }
+}
+
+/* Responsive styles for screen size 1009px and above */
+// this is the desktop view
+@media (min-width: 1009px) {
+  header {
+    height: 30%;
+  }
+
+  .logo img {
+    width: 15%;
+    margin-left: 50px;
+    margin-bottom: 10px;
+  }
+}
+
+
+
+

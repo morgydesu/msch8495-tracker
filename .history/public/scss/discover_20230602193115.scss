@@ -1,0 +1,135 @@
+// this is the discover section
+.discover-section {
+  width: 70%;
+  float: left;
+  flex: 1;
+}
+
+// the text in the discover
+h1 {
+  font-size: 40px;
+  margin-bottom: 0px;
+  margin-left: 10px;
+  text-align: left;
+  display: flex;
+  font-weight: bold;
+  color: #DFE0E2;
+  margin-right: auto;
+}
+
+h2.genre__title {
+  font-size: 20px;
+  margin-bottom: 0px;
+  margin-top: 0px;
+  width: 100%;
+  text-align: left;
+  font-weight: bold;
+  color: #DFE0E2;
+  margin-right: auto;
+}
+
+h3.genre__title {
+  font-size: 15px;
+  margin-bottom: 0px;
+  margin-top: 0px;
+  width: 100%;
+  text-align: left;
+  color: #DFE0E2;
+  margin-right: auto;
+}
+
+.genre__bpm {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 10px;
+  margin-right: auto;
+}
+
+// The album feature
+.album {
+  // background: #1F2020;
+  margin: 10px;
+  // padding: 10px;
+  // padding-top: 0px;
+  // box-shadow: 10px 10px;
+  // border-radius: 5px;
+  overflow: hidden;
+  // margin-right: auto;
+  margin-left: -10%;
+}
+
+.album:hover {
+  transform: scale(1.05);
+}
+
+.album__image {
+  display: flex;
+  margin: 10px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.album__image img {
+  width: 150px;
+  height: 150px;
+}
+
+
+// The button feature 
+.album__toggle {
+  justify-content: center;
+  align-content: center;
+  cursor: pointer;
+  transition: transform 0.3s;
+  margin-left: 50%;
+  margin-bottom: 10px;
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.album__toggle .fas {
+  transition: transform 0.3s;
+  display: block; /* Add this line to change the display to block */
+  margin-top: 5px; /* Adjust the margin-top as needed */
+  // align-content: center;
+  font-size: 14px;
+}
+
+.album__toggle:hover {
+  color: #555;
+}
+
+
+// The text inside the dropdown button
+.album__details {
+  display: none;
+  padding: 10px;
+  background-color: #f9f9f9;
+  text-align: left;
+  border-radius: 5px;
+
+}
+
+.album__details.show {
+  display: block;
+}
+
+.album__title {
+  font-weight: bold;
+  font-size: larger;
+}
+
+.album__bpm,
+.album__year {
+  font-size: smaller;
+}
+
+.album__bpm {
+  color: #EB5160;
+  font-weight: bold;
+}
+
+
+
+  

@@ -1,0 +1,146 @@
+/* Music Tracker Playlist */
+// this is the tracker information css
+.tracker__inputs {
+  border-bottom: 2px solid #1F2020;
+  // padding: 10px;
+}
+
+.tracker__song {
+  display: inline-block;
+  box-sizing: border-box;
+  font-size: 1em;
+  height: 2.5em;
+  padding: 5px; /* Adjusted padding */
+  border: 1px;
+  outline: none;
+  background: #f9f9f9;
+  width: 100%;
+  min-width: 15ch;
+  max-width: 30ch;
+  border: 1px solid var(--select-border);
+  border-radius: 0.25em;
+  padding: 0.25em 0.5em;
+}
+
+#music-tracker button {
+  width: 20px;
+  height: 20px;
+  background: #707070;
+cursor: pointer;
+  color: red;
+    border: none;
+  border-radius: 80%;
+}
+
+.tracker__add:hover {
+  background: rgba(0, 0, 0, 0.1);
+}
+
+.tracker__bpm {
+  // A reset of styles, including removing the default dropdown arrow
+  appearance: none;
+  // Additional resets for further consistency
+  background-color: #EB5160;
+  border: none;
+  padding: 0 1em 0 0;
+  margin: 0;
+  width: 100%;
+  font-family: inherit;
+  font-size: inherit;
+  cursor: inherit;
+  line-height: inherit;
+}
+
+
+// this is the placement of the music tracker css
+#music-tracker{
+  // background-color: #f9f9f9;
+  background: #dfe0e2;
+padding: 10px;
+max-width: 600px;
+width: 50%;
+padding-top: 20px;
+border-color: #1F2020;
+}
+
+.music-tracker 
+.entry-list{
+  display: flex;
+  justify-content: flex-end; /* Align content to the right side */
+  align-items: flex-start;
+  gap: 20px;
+  flex-direction: column;
+  width: 100%;
+  max-width: 600px;
+  margin-left: auto; /* Move the music tracker to the right */
+  padding: 10px;
+}
+
+// this is the entry list function css
+.entry-list {
+  width: 600px;
+  margin: 10px;
+  padding: 10px;
+  display: flex;
+  justify-content: flex-start; /* Align content to the left side */
+  align-items: flex-start;
+  gap: 20px;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  background: #dfe0e2;
+  color: #1F2020;
+}
+
+.entry-list div {
+  display: flex;
+  align-items: center;
+}
+
+.entry-list button {
+  margin-right: 10px;
+}
+
+.entry-list img {
+  width: 20%;
+  height: 20%;
+}
+
+
+//the option value css; custom select down button 
+// Resetting the default style
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+// select 
+// .tracker__song {
+//   // A reset of styles, including removing the default dropdown arrow
+//   appearance: none;
+//   // Additional resets for further consistency
+//   margin: 0;
+//   width: 100%;
+//   // font-family: inherit;
+//   // line-height: inherit;
+//   outline: none;
+//   min-width: 15ch;
+//   max-width: 30ch;
+//   border: 1px solid var(--select-border);
+//   border-radius: 0.25em;
+//   padding: 0.25em 0.5em;
+//   font-size: 1.25rem;
+//   cursor: pointer;
+//   line-height: 1.1;
+//   background-color: #EB5160;
+//   display: grid;
+// // ...existing styles
+//   grid-template-areas: "select";
+// // ...existing styles
+//   align-items: center;
+//   color:#1F2020;
+// }
+
+
+

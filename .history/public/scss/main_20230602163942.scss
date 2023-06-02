@@ -1,0 +1,162 @@
+//imports all of the other sub scss to the main scss
+@import "discover";
+@import "musictracker";
+@import "header";
+
+// This is the font Gotham Medium
+@font-face {
+  font-family: "Gotham Medium";
+  src: ("GothamMedium.ttf") format("truetype");
+}
+
+* {
+  font-family: "Gotham Medium";
+}
+
+//this is the scss for the whole tracker
+body{
+  background: #071013;
+ }
+
+/* Additional styles for positioning */
+.container {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+
+  /* Responsive Styles */
+//this is the css responsive style for the discover section
+// this is the mobile view
+@media (max-width: 640px) {
+  .discover-section {
+    width: 100%;
+    float: none;
+  }
+
+  .album__toggle {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+/* Responsive styles for screens from 641px to 1008px */
+// this is between mobile and desktop view
+@media (min-width: 641px) and (max-width: 1008px) {
+  .discover-section {
+    width: 70%;
+    float: left;
+  }
+}
+
+
+//this is the responsive style for the music tracker 
+/* Responsive styles for screen size up to 640px */
+// this is the mobile view
+@media (max-width: 640px) {
+  .music-tracker {
+    width: 100%;
+    float: none;
+    margin: 10px;
+  }
+  #music__tracker {
+        font-size: 12px;
+      }
+}
+
+/* Responsive styles for screen size from 641px to 1008px */
+// this is between desktop and mobile view
+@media (min-width: 641px) and (max-width: 1008px) {
+  .music-tracker {
+    width: calc(70% - 20px);
+    float: left;
+    margin: 20px 10px;
+  }
+  .music-tracker .tracker__inputs input,
+  .music-tracker .tracker__inputs select {
+    font-size: 14px;
+  }
+  
+  .music-tracker .tracker__add {
+    font-size: 14px;
+    padding: 8px 12px;
+  }
+  
+  .music-tracker .tracker__bpm-image img {
+    max-width: 100%;
+    height: auto;
+  }
+
+}
+
+/* Responsive styles for screen size 1009px and above */
+// this is the desktop view
+@media (min-width: 1009px) {
+  .music-tracker {
+    width: calc(60% - 20px);
+    float: left;
+    margin: 20px;
+  }
+  .music-tracker .tracker__inputs input,
+  .music-tracker .tracker__inputs select {
+    font-size: 16px;
+  }
+  
+  .music-tracker .tracker__add {
+    font-size: 16px;
+    padding: 10px 16px;
+  }
+  
+  .music-tracker .tracker__bpm-image img {
+    max-width: 100%;
+    height: auto;
+  }
+}
+
+
+//this is the css responsive style for the header 
+// this is the mobile view
+@media (max-width: 640px) {
+  header {
+    height: 20%;
+  }
+
+  .logo img {
+    width: 30%;
+    margin-left: 20px;
+    margin-bottom: 5px;
+  }
+}
+
+/* Responsive styles for screen size from 641px to 1008px */
+// sizes between mobile and desktop view
+@media (min-width: 641px) and (max-width: 1008px) {
+  header {
+    height: 25%;
+  }
+
+  .logo img {
+    width: 20%;
+    margin-left: 30px;
+    margin-bottom: 8px;
+  }
+}
+
+/* Responsive styles for screen size 1009px and above */
+// this is the desktop view
+@media (min-width: 1009px) {
+  header {
+    height: 30%;
+  }
+
+  .logo img {
+    width: 15%;
+    margin-left: 50px;
+    margin-bottom: 10px;
+  }
+}
+
+
+

@@ -1,0 +1,346 @@
+//imports all of the other sub scss to the main scss
+@import "discover";
+@import "musictracker";
+@import "header";
+
+// This is the font Gotham Medium
+@font-face {
+  font-family: "Gotham Medium";
+  src: ("GothamMedium.ttf") format("truetype");
+}
+
+* {
+  font-family: "Gotham Medium";
+}
+
+//this is the scss for the whole tracker
+body{
+  background: #071013;
+ }
+
+/* Additional styles for positioning */
+.container {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+
+  /* Responsive Styles */
+//this is the css responsive style for the discover section
+// this is the mobile view
+@media (max-width: 640px) {
+  .discover-section {
+    width: 100%;
+    float: none;
+  }
+
+  .album__toggle {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+/* Responsive styles for screens from 641px to 1008px */
+// this is between mobile and desktop view
+@media (min-width: 641px) and (max-width: 1008px) {
+  .discover-section {
+    width: 70%;
+    float: left;
+  }
+}
+
+
+//this is the responsive style for the music tracker 
+/* Responsive styles for screen size up to 640px */
+// this is the mobile view
+@media (max-width: 640px) {
+  .tracker__add {
+    font-size: 1em;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .tracker__song {
+    font-size: 0.7em;
+    height: 2.5em;
+    padding: 0.25em 0.5em;
+  }
+
+  .tracker__BPM {
+    font-size: 0.7em;
+    max-width: 70%;
+    margin-left: 10px;
+    margin-right: 5px;
+  }
+
+  #music-tracker {
+    font-size: 12px;
+    padding: 10px;
+    width: calc(100% - 20px); /* Adjust the width as needed */
+    margin-left: 20px; /* Add margin to separate from the discover section */
+    margin-top: 20px; /* Add margin to separate from the discover section */
+  }
+
+  .entry-title {
+    font-size: 12px;
+  }
+
+  .music-tracker {
+    width: calc(100% - 20px); /* Adjust the width as needed */
+    margin-left: 20px; /* Add margin to separate from the discover section */
+    margin-top: 20px; /* Add margin to separate from the discover section */
+  }
+
+  .entry-list {
+    margin-top: 0px;
+    gap: 10px;
+  }
+
+  .entry {
+    padding: 5px;
+  }
+
+  .music-tracker .tracker__song,
+  .music-tracker .tracker__BPM,
+  .music-tracker .tracker__add,
+  .entry-list button,
+  .music-tracker div,
+  .entry-list img,
+  .entry-image,
+  .entry-details,
+  .delete-button {
+    font-size: 12px;
+  }
+  
+  .music-tracker .tracker__song,
+  .music-tracker .tracker__BPM,
+  .music-tracker .tracker__add,
+  .entry-list button {
+    padding: 6px 10px;
+  }
+  
+  .music-tracker .tracker__BPM {
+    height: 2em;
+  }
+  
+  .entry-image {
+    width: 50px;
+    height: 50px;
+    margin-right: 5px;
+  }
+  
+  .entry-details {
+    font-size: 10px;
+  }
+  
+  .delete-button {
+    font-size: 14px;
+  }
+
+/* Responsive styles for screen size from 641px to 1008px */
+// this is between desktop and mobile view
+@media (min-width: 641px) and (max-width: 1008px) {
+  .tracker__add {
+    font-size: 1em;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .tracker__song {
+    font-size: 0.7em;
+    height: 2.5em;
+    padding: 0.25em 0.5em;
+  }
+
+  .tracker__BPM {
+    font-size: 0.7em;
+    max-width: 70%;
+    margin-left: 10px;
+    margin-right: 5px;
+  }
+
+  #music-tracker {
+    font-size: 14px;
+    padding: 15px;
+    width: calc(50% - 20px); /* Adjust the width as needed */
+    margin-left: 20px; /* Add margin to separate from the discover section */
+    margin-top: 20px; /* Add margin to separate from the discover section */
+    float: right;
+  }
+
+  .music-tracker {
+    width: calc(50% - 20px); /* Adjust the width as needed */
+    margin-left: 20px; /* Add margin to separate from the discover section */
+    margin-top: 20px; /* Add margin to separate from the discover section */
+    float: left;
+    margin: 20px 10px;
+  }
+  .music-tracker .tracker__song,
+  .music-tracker .tracker__BPM,
+  .music-tracker .tracker__add,
+  .entry-list button,
+  .music-tracker div,
+  .entry-list img,
+  .entry-image,
+  .entry-details,
+  .delete-button {
+    font-size: 14px;
+  }
+  
+  .music-tracker .tracker__song,
+  .music-tracker .tracker__BPM,
+  .music-tracker .tracker__add,
+  .entry-list button {
+    padding: 8px 12px;
+  }
+  
+  .music-tracker .tracker__BPM {
+    height: 2.2em;
+  }
+
+  .entry-list {
+    margin-top: 0px;
+    gap: 10px;
+  }
+  
+  .entry {
+    padding: 5px;
+  }
+
+  .entry-image {
+    width: 60px;
+    height: 60px;
+    margin-right: 5px;
+  }
+
+  
+  .entry-title {
+    font-size: 14px;
+  }
+
+  .entry-details {
+    font-size: 12px;
+  }
+  
+  .delete-button {
+    font-size: 16px;
+  }
+}
+
+/* Responsive styles for screen size 1009px and above */
+// this is the desktop view
+@media (min-width: 1009px) {
+  .tracker__add {
+    font-size: 1.5em;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .tracker__song {
+    font-size: 0.8em;
+    height: 2.5em;
+    padding: 0.25em 0.5em;
+  }
+
+  .tracker__BPM {
+    font-size: 0.8em;
+    max-width: 80%;
+    margin-left: 20px;
+    margin-right: 10px;
+  }
+
+  #music-tracker {
+    font-size: 16px;
+    padding: 20px;
+  }
+
+  .music-tracker {
+    width: calc(60% - 20px);
+    float: left;
+    margin: 20px;
+  }
+  .music-tracker .tracker__song,
+  .music-tracker .tracker__BPM,
+  .music-tracker .tracker__add,
+  .entry-list button,
+  .music-tracker div,
+  .entry-list img,
+  .entry-image,
+  .entry-details,
+  .delete-button {
+    font-size: 16px;
+  }
+  
+  .music-tracker .tracker__song,
+  .music-tracker .tracker__BPM,
+  .music-tracker .tracker__add,
+  .entry-list button {
+    padding: 10px 16px;
+  }
+  
+  .music-tracker .tracker__BPM {
+    height: 2.5em;
+  }
+  
+  .entry-image {
+    width: 80px;
+    height: 80px;
+  }
+  
+  .entry-details {
+    font-size: 14px;
+  }
+  
+  .delete-button {
+    font-size: 18px;
+  }
+}
+
+
+//this is the css responsive style for the header 
+// this is the mobile view
+@media (max-width: 640px) {
+  header {
+    height: 20%;
+  }
+
+  .logo img {
+    width: 30%;
+    margin-left: 20px;
+    margin-bottom: 5px;
+  }
+}
+
+/* Responsive styles for screen size from 641px to 1008px */
+// sizes between mobile and desktop view
+@media (min-width: 641px) and (max-width: 1008px) {
+  header {
+    height: 25%;
+  }
+
+  .logo img {
+    width: 20%;
+    margin-left: 30px;
+    margin-bottom: 8px;
+  }
+}
+
+/* Responsive styles for screen size 1009px and above */
+// this is the desktop view
+@media (min-width: 1009px) {
+  header {
+    height: 30%;
+  }
+
+  .logo img {
+    width: 15%;
+    margin-left: 50px;
+    margin-bottom: 10px;
+  }
+}
+}
+
+
+
