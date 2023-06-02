@@ -209,13 +209,23 @@ margin-top: 20px;
   }
 
   .tracker__song{
+    // display: inline-block;
+    // box-sizing: border-box;
     height: 2.5em;
+    // border: 1px;
+    // outline: none;
+    // background: #f9f9f9;
     max-width: 100%;
     width: 300px;
-    margin-bottom: 5px;
+    // border: 1px solid #1F2020;
+    // border-radius: 0.25em;
+    // padding: 0.25em 0.5em;
+    // margin-bottom: 5px;
     text-align: left;
+    // color: #1F2020;
     font-size: 1em;
   }
+
 }
 
 

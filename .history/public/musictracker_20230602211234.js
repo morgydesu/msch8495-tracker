@@ -1,5 +1,3 @@
-// This contains the functionality of the music tracker in the application. It uses the local storage to keep the record of the user input and has functionality for the user to delete the input from the storage and the actual entry list. 
-
 //import the bpm image 
 import lowSpeedImage from './bpm_image/low-speed.png';
 import mediumSpeedImage from './bpm_image/medium-speed.png';
@@ -161,3 +159,5 @@ const mt = new MusicTracker(musicTracker);
 
 window.mt = mt;
 
+// Summary of the musicTracker.js
+// This contains the functionality of the music tracker in the application. It uses the local storage to keep the record of the user input and has functionality for the user to delete the input from the storage and the actual entry list. 

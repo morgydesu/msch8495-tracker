@@ -1,9 +1,3 @@
- <!-- Summary of this index.html -->
-<!-- This section consists of three parts: header, discover section, and music tracker.
-  -In the header section, it contains the logo which is the one developed from the design assignment.
-  -In the discover section, it contains three genres which are divided according to its BPM. There are different images, song name, year, and BPM for each of the songs. The three BPM categories contain four songs. 
-  -In the music tracker, it contains a further function known as the "entry List". It is used as a placeholder for the user input history. -->
-
   <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -235,4 +229,28 @@
 
 </body>
 </html>
+
+<!-- Summary of this index.html -->
+<!-- The code starts with the <!DOCTYPE html> declaration, which specifies that the document is an HTML5 document.
+
+The <html> element represents the root of an HTML document.
+
+The <head> section contains meta-information about the HTML document, such as the character encoding, viewport configuration, and the title of the page. It also includes the JavaScript files musictracker.js and discover.js as well as the CSS file main.scss.
+
+The <body> section contains the visible content of the HTML document.
+
+The <header> element with the class "logo" represents the logo section. Inside it, there is an <img> element that displays the logo image.
+
+The <div> element with the class "container" wraps the content of the page.
+
+Inside the container, there is a section for the discovery page with the class "discover-section". It contains a heading <h1> with the text "Discover".
+
+The discovery page is divided into three sections based on the speed of music: Slow Speed, Medium Speed, and Fast Speed. Each section is represented by a <div> element with the class "genre__bpm".
+
+Inside each section, there are multiple albums represented by <div> elements with the class "album". Each album has an image, a toggle button, and details such as title, BPM, and year.
+
+The JavaScript functions toggleAlbumDetails are assigned to the onclick event of the toggle buttons, allowing the user to toggle the album details.
+
+After the discovery section, there is a "Music Tracker" section represented by a <div> element with the class "music-tracker". It contains an empty <div> element with the class "entry-list" that will be populated dynamically by JavaScript.
+The closing </div> tags close the opened <div> elements. -->
 

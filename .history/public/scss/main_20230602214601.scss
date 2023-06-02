@@ -114,6 +114,8 @@ body{
     justify-content: flex-start; 
     align-items: flex-start;
     display: flex;
+
+    
   }
   
   .tracker__add {
@@ -208,14 +210,6 @@ margin-top: 20px;
     margin-left: 15%;
   }
 
-  .tracker__song{
-    height: 2.5em;
-    max-width: 100%;
-    width: 300px;
-    margin-bottom: 5px;
-    text-align: left;
-    font-size: 1em;
-  }
 }
 
 

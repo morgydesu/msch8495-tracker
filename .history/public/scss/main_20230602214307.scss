@@ -114,6 +114,21 @@ body{
     justify-content: flex-start; 
     align-items: flex-start;
     display: flex;
+
+
+  height: 2.5em;
+  // border: 1px;
+  // outline: none;
+  // background: #f9f9f9;
+  max-width: 100%;
+  width: 300px;
+  border: 1px solid #1F2020;
+  border-radius: 0.25em;
+  padding: 0.25em 0.5em;
+  margin-bottom: 5px;
+  text-align: left;
+  color: #1F2020;
+  font-size: 1em;
   }
   
   .tracker__add {
@@ -208,14 +223,6 @@ margin-top: 20px;
     margin-left: 15%;
   }
 
-  .tracker__song{
-    height: 2.5em;
-    max-width: 100%;
-    width: 300px;
-    margin-bottom: 5px;
-    text-align: left;
-    font-size: 1em;
-  }
 }
 
 

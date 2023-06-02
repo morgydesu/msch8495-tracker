@@ -1,4 +1,3 @@
-//this is the full header function css, which has the width of the screen with a slight header height  
 header {
   height: 30%;
   width: 100vw; /* width to fill the full screen */
@@ -9,7 +8,6 @@ header {
   min-height: 0%;
 }
 
-//this is the logo css which is placed on the left side of the header
 .logo img {
   width: 15%;
   height: auto;
@@ -17,3 +15,4 @@ header {
   margin-bottom: 10px;
 }
 
+//this creates the header of the page, whcih follows the red color as the main accent. It contains the logo. 

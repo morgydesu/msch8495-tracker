@@ -1,5 +1,3 @@
-// This contains the functionality of the music tracker in the application. It uses the local storage to keep the record of the user input and has functionality for the user to delete the input from the storage and the actual entry list. 
-
 //import the bpm image 
 import lowSpeedImage from './bpm_image/low-speed.png';
 import mediumSpeedImage from './bpm_image/medium-speed.png';
@@ -12,14 +10,13 @@ class MusicTracker {
   static LOCAL_STORAGE_DATA_KEY = "music-tracker-entries";
   counter = 1;
 
-//The constructor of the MusicTracker class takes a root element as an argument, which represents the container element for the music tracker. It inputs the html document into the root element.
   constructor(root) {
     this.root = root;
     this.root.innerHTML = MusicTracker.html();
-    this.entries = []; //this is so the user input can be stored
+    this.entries = [];
 
-    this.loadEntries(); //it loads the browser's local storage
-    this.updateView(); // it updates the view of the music tracker with the loaded entries.
+    this.loadEntries();
+    this.updateView();
 
     this.root.querySelector(".tracker__add").addEventListener("click", () => {
       const date = new Date();
@@ -62,7 +59,6 @@ class MusicTracker {
     });
   }
 
-  //The getNextID() method is responsible for generating the next available ID for a new music entry based on the existing entries.
   getNextID() {
     let maxID = 0;
     this.entries.forEach((entry) => {
@@ -73,7 +69,6 @@ class MusicTracker {
     return maxID + 1;
   }
 
-  //this is a static html which contains the structure of the music tracker input structure.
   static html() {
     return `
       <div class="music-tracker">
@@ -92,7 +87,6 @@ class MusicTracker {
     `;
   }
 
-  //The addEntry() method adds a new entry to the entries array, updates the entry IDs, saves the entries to the browser's local storage, and updates the view.
   addEntry(entry) {
     this.entries.push(entry);
     this.updateEntryIDs();
@@ -100,7 +94,6 @@ class MusicTracker {
     this.updateView(); // Update the view after adding the new entry
   }
 
-  //The deleteEntry() method removes an entry from the entries array based on its ID, updates the entry IDs, saves the entries to the local storage, and updates the view.
   deleteEntry(entryID) {
     const index = this.entries.findIndex((entry) => entry.ID === entryID);
     if (index !== -1) {
@@ -111,14 +104,12 @@ class MusicTracker {
     }
   }
 
-  //The updateEntryIDs() method updates the IDs of the entries in the entries array based on their index.
   updateEntryIDs() {
     this.entries.forEach((entry, index) => {
       entry.ID = index + 1;
     });
   }
 
-  //The updateView() method updates the HTML view of the music tracker by generating HTML elements for each entry in the entries array and appending them to the entry list.
   updateView() {
     const entryList = this.root.querySelector(".entry-list");
     entryList.innerHTML = "";
@@ -142,12 +133,10 @@ class MusicTracker {
     });
   }
 
-  //The saveEntries() method saves the entries array to the browser's local storage as a JSON string.
   saveEntries() {
     localStorage.setItem(MusicTracker.LOCAL_STORAGE_DATA_KEY, JSON.stringify(this.entries));
   }
 
-  //The loadEntries() method retrieves the entries data from the local storage and parses it into the entries array.
   loadEntries() {
     const entriesData = localStorage.getItem(MusicTracker.LOCAL_STORAGE_DATA_KEY);
     if (entriesData) {
@@ -161,3 +150,5 @@ const mt = new MusicTracker(musicTracker);
 
 window.mt = mt;
 
+// Summary of the musicTracker.js
+// This contains the functionality of the music tracker in the application. It uses the local storage to keep the record of the user input and has functionality for the user to delete the input from the storage and the actual entry list. 

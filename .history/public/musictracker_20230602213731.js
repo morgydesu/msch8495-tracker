@@ -78,7 +78,7 @@ class MusicTracker {
     return `
       <div class="music-tracker">
         <div class="tracker__inputs">
-          <input type="text" class="tracker__song" placeholder="Type song">
+          <input type="text" class="tracker__song" placeholder="Type song from discover">
           <select class="tracker__BPM" placeholder="Select speed">
             <option value="0" selected disabled>Select option</option>                
             <option value="60~90 BPM" data-img_src="${lowSpeedImage}">60~90 BPM</option>

@@ -1,5 +1,3 @@
-//toggleAlbumDetails has the functionality of the toggle system in the dosicver section of the application. It allows each albums to open and close its information using the toggle button. 
-
 //discover onclick function
 function toggleAlbumDetails(button) {
     const album = button.parentNode;
@@ -7,4 +5,6 @@ function toggleAlbumDetails(button) {
   
     albumDetails.classList.toggle('show');
   }
-    
+  
+//toggleAlbumDetails has the functionality of the toggle system in the dosicver section of the application. It allows each albums to open and close its information using the toggle button. 
+  

@@ -1,5 +1,3 @@
-// This contains the functionality of the music tracker in the application. It uses the local storage to keep the record of the user input and has functionality for the user to delete the input from the storage and the actual entry list. 
-
 //import the bpm image 
 import lowSpeedImage from './bpm_image/low-speed.png';
 import mediumSpeedImage from './bpm_image/medium-speed.png';
@@ -18,8 +16,8 @@ class MusicTracker {
     this.root.innerHTML = MusicTracker.html();
     this.entries = []; //this is so the user input can be stored
 
-    this.loadEntries(); //it loads the browser's local storage
-    this.updateView(); // it updates the view of the music tracker with the loaded entries.
+    this.loadEntries();
+    this.updateView();
 
     this.root.querySelector(".tracker__add").addEventListener("click", () => {
       const date = new Date();
@@ -161,3 +159,5 @@ const mt = new MusicTracker(musicTracker);
 
 window.mt = mt;
 
+// Summary of the musicTracker.js
+// This contains the functionality of the music tracker in the application. It uses the local storage to keep the record of the user input and has functionality for the user to delete the input from the storage and the actual entry list. 
