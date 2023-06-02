@@ -117,10 +117,8 @@ body{
   }
   
   .tracker__add {
-    font-size: 1em;
+    font-size: 1.5em;
     padding: none;
-    margin-left: 50%;
-    margin-top: -3%;
   }
   
   .tracker__add::before {
@@ -191,7 +189,8 @@ margin-top: 20px;
   }
 
 .music-tracker {
-  margin-left: 0%;
+  margin-left: 10%;
+  
 }
 
   .entry-list img {
@@ -200,13 +199,6 @@ margin-top: 20px;
     margin-right:10px;
   }
 
-  .tracker__BPM {
-    margin-left: 5px;
-  }
-
-  .tracker__add {
-    margin-left: 15%;
-  }
 
 }
 

@@ -117,10 +117,8 @@ body{
   }
   
   .tracker__add {
-    font-size: 1em;
+    font-size: 1.5em;
     padding: none;
-    margin-left: 50%;
-    margin-top: -3%;
   }
   
   .tracker__add::before {
@@ -131,6 +129,7 @@ body{
     margin-top: -300%;
     padding: none;
     float:right;
+
   }
 
   .tracker__BPM {
@@ -143,6 +142,7 @@ body{
     justify-content: flex-start; /* Align content to the left side */
     align-items: flex-start;
     display: flex;
+
   }
   
 .music-tracker {
@@ -184,28 +184,15 @@ margin-top: 20px;
 @media (min-width: 1009px) {
   #music-tracker{
     width: 30%;
-    float: left;
+    float: right;
     margin: 20px;
-    padding: 30px;
-    padding-right: 40px;
+    // padding: 30px;
   }
-
-.music-tracker {
-  margin-left: 0%;
-}
 
   .entry-list img {
     width: 50px;
     height: 50px;
     margin-right:10px;
-  }
-
-  .tracker__BPM {
-    margin-left: 5px;
-  }
-
-  .tracker__add {
-    margin-left: 15%;
   }
 
 }
